@@ -29,8 +29,8 @@ def alice():
     }
 
     response = requests.request("GET", url, headers=headers)
-    # how long is the response.json, 0-4, random, 0-8
-    output = response.json()     #5 items long
+    #list is 5 items long, random number to use as index in list
+    output = response.json()
     list=[]
     for i in range(len(output)):
         list.append(output[i]['text'])
@@ -51,6 +51,15 @@ def saathvika():
 @app.route('/linda/')
 def linda():
     return render_template("linda.html")
+
+
+@app.route('/todo/')
+def todo():
+    return render_template("todo.html")
+
+@app.route('/StudyRoom/')
+def StudyRoom():
+    return render_template("StudyRoom.html")
 
 
 # runs the application on the development server
