@@ -38,8 +38,6 @@ def alice():
     return render_template("alice.html", output=list)
 
 
-
-
 @app.route('/pranavi/')
 def pranavi():
     return render_template("pranavi.html")

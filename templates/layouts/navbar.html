@@ -2,20 +2,113 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
-            <a class="nav-link" href={{ url_for('index') }}>Home</a>
-            <a class="nav-link" href={{ url_for('linda') }}>Linda</a>
-            <a class="nav-link" href={{ url_for('alice') }}>Alice</a>
-            <a class="nav-link" href={{ url_for('saathvika') }}>Saathvika</a>
-            <a class="nav-link" href={{ url_for('samaya') }}>Samaya</a>
-            <a class="nav-link" href={{ url_for('pranavi') }}>Pranavi</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="font-size: 22px;">
+                    <div class="dropdown" style="font-family: 'Monotype Corsiva';color: ghostwhite">
+                        <button onclick="myFunction1()" class="dropbtn">About Us</button>
+                        <div id="Dropdown1" class="dropdown-content">
+                            <a class="nav-link" href={{ url_for('index') }}>Home</a>
+                            <a class="nav-link" href={{ url_for('linda') }}>Linda</a>
+                            <a class="nav-link" href={{ url_for('alice') }}>Alice</a>
+                            <a class="nav-link" href={{ url_for('saathvika') }}>Saathvika</a>
+                            <a class="nav-link" href={{ url_for('samaya') }}>Samaya</a>
+                            <a class="nav-link" href={{ url_for('pranavi') }}>Pranavi</a>
+                        </div>
+                    </div>
 
+                    <div class="dropdown" style="font-family: 'Monotype Corsiva';color: ghostwhite">
+                        <button onclick="myFunction2()" class="dropbtn">Mini-Labs</button>
+                        <div id="Dropdown2" class="dropdown-content">
+                            <a class="nav-link" href={{ url_for('index') }}>Home</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown" style="font-family: 'Monotype Corsiva';color: ghostwhite">
+                        <button onclick="myFunction3()" class="dropbtn">Mini-Labs</button>
+                        <div id="Dropdown3" class="dropdown-content">
+                            <a class="nav-link" href={{ url_for('index') }}>Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
+
+            <style>
+                .dropbtn {
+                    background-color: black;
+                    color: ghostwhite;
+                    padding: 16px;
+                    font-size: 22px;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .dropbtn:hover, .dropbtn:focus {
+                    background-color: ghostwhite;
+                    color: black;
+                }
+
+                .dropdown {
+                    position: center;
+                    display: inline-block;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: ghostwhite;
+                    min-width: 160px;
+                    overflow: auto;
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    z-index: 1;
+                }
+
+                .dropdown-content a {
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                .dropdown a:hover {background-color: ghostwhite;}
+
+                .show {display: block;}
+            </style>
+
+        <script>
+            /* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+            function myFunction2() {
+                document.getElementById("Dropdown2").classList.toggle("show");
+            }
+
+            function myFunction1() {
+                document.getElementById("Dropdown1").classList.toggle("show");
+            }
+
+            function myFunction3() {
+                document.getElementById("Dropdown3").classList.toggle("show");
+            }
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    const dropdowns = document.getElementsByClassName("dropdown-content");
+                    let i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
