@@ -2,7 +2,6 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,12 +9,49 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
-            <a class="nav-link" href={{ url_for('linda') }}>Linda</a>
-            <a class="nav-link" href={{ url_for('alice') }}>Alice</a>
-            <a class="nav-link" href={{ url_for('saathvika') }}>Saathvika</a>
-            <a class="nav-link" href={{ url_for('samaya') }}>Samaya</a>
-            <a class="nav-link" href={{ url_for('pranavi') }}>Pranavi</a>
-
+            <a class="nav-link" href={{ url_for('todo') }}>To-Do List</a>
+            <a class="nav-link" href={{ url_for('StudyRoom') }}>StudyRoom</a>
+            <div class="dropdown">
+                <button class="dropbtn">Individual</button>
+                <div class="dropdown-content">
+                    <a href={{ url_for('alice') }}>Alice</a>
+                    <a href={{ url_for('linda') }}>Linda</a>
+                    <a href={{ url_for('pranavi') }}>Pranavi</a>
+                    <a href={{ url_for('saathvika') }}>Saathvika</a>
+                    <a href={{ url_for('samaya') }}>Samaya</a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
+
+<style>
+    .dropbtn {
+        background-color: #374db9;
+        color: white;
+        padding: 7px;
+        font-size: 16px;
+        border: none;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {background-color: #ddd;}
+    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown:hover .dropbtn {background-color: #8c99d5;}
+</style>

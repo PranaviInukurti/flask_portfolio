@@ -1,0 +1,30 @@
+{% extends "layouts/project.html" %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T0-Do List</title>
+</head>
+<body>
+<div class="container" id="todo-list">
+    <h2>TODO LIST</h2>
+    <h3>Add Item</h3>
+    <p>
+        <input id="new-task" type="text"><button onclick="addTask()">Add</button>
+    </p>
+
+    <h3>Todo</h3>
+    <ul id="incomplete-tasks">
+        <li><input type="checkbox"><label>Math Homework</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+        <li><input type="checkbox"><label>History Reading</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+    </ul>
+
+    <h3>Completed</h3>
+    <ul id="completed-tasks">
+        <li><input type="checkbox" checked><label>Essay Final Draft</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+    </ul>
+</div>
+</body>
+</html>
+{% endblock %}
