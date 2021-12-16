@@ -1,4 +1,5 @@
 
+
 <style>
     .navbar{
         z-index: 900;
@@ -129,23 +130,43 @@
     }
 </style>
 {% block body %}
+    <<<<<<< HEAD
 
- <h1 style="text-align: center; padding: 15px; color: black; text-shadow: 5px 5px lightgrey; font-size: 50px;">Todo List</h1>
+    <h1 style="text-align: center; padding: 15px; color: black; text-shadow: 5px 5px lightgrey; font-size: 50px;">Todo List</h1>
 
     <div class="container">
+    <p>
+        <label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
+        =======
+        <!DOCTYPE html>
+    <div style = " margin: 2% 5% 5%; text-align:left; font-family: Helvetica;">
+        <div>
+            <h1 style id="ToDo" >To-Do List</h1>
+        </div>
+    </div>
+
+    <body>
+    <div class="container" id="todo-list">
+        <h3>Add Item</h3>
         <p>
-            <label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
+            <input id="new-task" type="text"><button onclick="addTask()">Add</button>
+            >>>>>>> origin/main
         </p>
 
         <h3>Todo</h3>
         <ul id="incomplete-tasks">
             <li><input type="checkbox"><label>Math Homework</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+            <<<<<<< HEAD
             <li class="editMode"><input type="checkbox"><label>Reading</label><input type="text" value="Read 20 minutes"><button class="edit">Edit</button><button class="delete">Delete</button></li>
 
+            =======
+            <li><input type="checkbox"><label>History Reading</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+            >>>>>>> origin/main
         </ul>
 
         <h3>Completed</h3>
         <ul id="completed-tasks">
+            <<<<<<< HEAD
             <li><input type="checkbox" checked><label>Essay</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
         </ul>
     </div>
@@ -309,3 +330,26 @@
 
 
 {% endblock %}
+=======
+<li><input type="checkbox" checked><label>Essay Final Draft</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+</ul>
+</div>
+</body>
+
+<style>
+    body{
+        background: #F5F5F5 ;
+    }
+    #ToDo{
+        position: relative;
+        font-family: 'Helvetica';
+        font-size: 60px;
+        font-weight: 800;
+        text-align: left;
+        padding: 15px;
+        color: #374db9;
+    }
+</style>
+
+{% endblock %}
+>>>>>>> origin/main
