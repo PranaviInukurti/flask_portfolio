@@ -1,7 +1,52 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base.html" %}
 
-<!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
+
+
+
+
+{% block body %}
+    <!DOCTYPE html>
+    <div style = " margin: 2% 5% 5%; text-align:left; font-family: Helvetica;">
+        <div>
+            <img src="/static/assets/STUD2.png" style="height: 550px; width: 550px;" id="STUD" />
+            <h1 style id="StudyOwl" >StudyOwl</h1>
+            <p style id="bestway">THE BEST WAY TO STUDY, IS WITH STUD</p>
+        </div>
+    </div>
+
+
+
+
+
+    <style>
+        body{
+            background: #F5F5F5 ;
+        }
+        #STUD{
+            position: absolute;
+            left: 1000px;
+        }
+        #StudyOwl{
+            position: relative;
+            left: 100px;
+            font-family: 'Helvetica';
+            font-size: 70px;
+            font-weight: 800;
+            text-align: left;
+            padding: 15px;
+            color: #374db9;
+        }
+        #bestway{
+            position: relative;
+            left: 70px;
+            down: 200px;
+            font-family: 'Helvetica';
+            font-size: 30px;
+            font-weight: 800;
+            text-align: left;
+            padding: 15px;
+            color: #697ace;
+        }
+    </style>
+
+{% endblock %}
