@@ -1,69 +1,3 @@
-//Images Toggle, code from Shreya
-function changeImage() {
-
-    if (document.getElementById("imgClickAndChange").src.includes('lindaWithMask'))
-    {
-        document.getElementById("imgClickAndChange").src = "/static/assets/lindaWithoutMask.jpg";
-    }
-    else{
-        document.getElementById("imgClickAndChange").src ="/static/assets/lindaWithMask.jpg"
-    }
-}
-
-//Translation Api
-function translateIt() {
-    console.log(document.getElementById("english").value)
-    let translateSetting = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://nlp-translation.p.rapidapi.com/v1/translate",
-        "method": "POST",
-        "headers": {
-            "content-type": "application/x-www-form-urlencoded",
-            "x-rapidapi-host": "nlp-translation.p.rapidapi.com",
-            "x-rapidapi-key": "9e3f40a0cemshcced0bdaa85f0c0p1e3309jsnbb4748bd1d8c"
-        },
-        "data": {
-            "text": document.getElementById("english").value,
-            "to": "es",
-            "from": "en"
-        }
-    };
-    $.ajax(translateSetting).done(function (response) {
-        console.log(response)
-        document.getElementById("spanish").innerText = response.translated_text.es;
-    });
-}
-
-//Random Motivational Quote Api
-function newQuote(){
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-        document.getElementById("display-quote").innerText = response;
-    });
-}
-const settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://motivational-quotes1.p.rapidapi.com/motivation",
-    "method": "POST",
-    "headers": {
-        "content-type": "application/json",
-        "x-rapidapi-host": "motivational-quotes1.p.rapidapi.com",
-        "x-rapidapi-key": "9e3f40a0cemshcced0bdaa85f0c0p1e3309jsnbb4748bd1d8c"
-    },
-    "processData": false,
-    "data": {
-        "key1": "value",
-        "key2": "value"
-    }
-};
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-    document.getElementById("display-quote").innerText = response;
-});
-
 
 //Todo List
 function showTodo(){
@@ -222,5 +156,4 @@ for (var i = 0; i < completedTasksHolder.children.length; i++) {
     //bind events to list item's children (taskIncomplete)
     bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
-
 

@@ -47,7 +47,8 @@ h1 {
     z-index: 900 !important;
 }
 
-/* Basic Style */
+
+/* Todo List Basic Style */
 
 body {
     background: #fff;
@@ -226,7 +227,6 @@ ul li.editMode label {
     background: white;
     color: black;
 }
-
 
 /* digital clock */
 #clock {
