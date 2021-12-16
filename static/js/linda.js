@@ -64,6 +64,11 @@ $.ajax(settings).done(function (response) {
     document.getElementById("display-quote").innerText = response;
 });
 
+function onOff() {
+    if($('#display-quote').css('display') === 'none') $('#display-quote').css('display', 'block')
+    else $('#display-quote').css('display', 'none')
+}
+
 
 //Todo List
 function showTodo(){
