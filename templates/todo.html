@@ -1,30 +1,44 @@
 {% extends "layouts/project.html" %}
 {% block body %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>T0-Do List</title>
-</head>
-<body>
-<div class="container" id="todo-list">
-    <h2>TODO LIST</h2>
-    <h3>Add Item</h3>
-    <p>
-        <input id="new-task" type="text"><button onclick="addTask()">Add</button>
-    </p>
+    <div style = " margin: 2% 5% 5%; text-align:left; font-family: Helvetica;">
+        <div>
+            <h1 style id="ToDo" >To-Do List</h1>
+        </div>
+    </div>
 
-    <h3>Todo</h3>
-    <ul id="incomplete-tasks">
-        <li><input type="checkbox"><label>Math Homework</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        <li><input type="checkbox"><label>History Reading</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-    </ul>
+    <body>
+    <div class="container" id="todo-list">
+        <h3>Add Item</h3>
+        <p>
+            <input id="new-task" type="text"><button onclick="addTask()">Add</button>
+        </p>
 
-    <h3>Completed</h3>
-    <ul id="completed-tasks">
-        <li><input type="checkbox" checked><label>Essay Final Draft</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-    </ul>
-</div>
-</body>
-</html>
+        <h3>Todo</h3>
+        <ul id="incomplete-tasks">
+            <li><input type="checkbox"><label>Math Homework</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+            <li><input type="checkbox"><label>History Reading</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+        </ul>
+
+        <h3>Completed</h3>
+        <ul id="completed-tasks">
+            <li><input type="checkbox" checked><label>Essay Final Draft</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+        </ul>
+    </div>
+    </body>
+
+    <style>
+        body{
+            background: #F5F5F5 ;
+        }
+        #ToDo{
+            position: relative;
+            font-family: 'Helvetica';
+            font-size: 60px;
+            font-weight: 800;
+            text-align: left;
+            padding: 15px;
+            color: #374db9;
+        }
+    </style>
 {% endblock %}
