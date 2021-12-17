@@ -22,7 +22,7 @@
 3. [Week 1 - Project Approval](#Week1)
 4. [Week 0](#Week0)
 ---
-###   <h2 id="Week3">Week 3 - Home Pages: Due 12/16</h2>
+###   <h2 id="Week3">Week 3 - WIP Project Review: Due 12/16</h2>
 - <a href="https://github.com/samayass/flask_portfolio/projects/1">Scrum Board</a>
 
 | Name | Requirement | Evidence | Grade |
