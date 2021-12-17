@@ -20,7 +20,7 @@
 1. [Week 3 - WIP Project Review](#Week3)
 2. [Week 2 - Home Pages](#Week2)
 3. [Week 1 - Project Approval](#Week1)
-4. [Week 0](#Week0)
+4. [Week 0 - Introduction](#Week0)
 ---
 ###   <h2 id="Week3">Week 3 - WIP Project Review: Due 12/16</h2>
 - <a href="https://github.com/samayass/flask_portfolio/projects/1">Scrum Board</a>
@@ -91,7 +91,7 @@
 | Linda Liu | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
 
 
-###   <h2 id="Week0">Week 0: Due 11/19</h2>
+###   <h2 id="Week0">Week 0 - Introduction: Due 11/19</h2>
 
 - <a href="https://github.com/PranaviInukurti/flask_portfolio/projects/1?card_filter_query=milestone%3A%22sprint+0+-+introduction%22">Scrum Board</a>
 
