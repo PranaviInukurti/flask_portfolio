@@ -46,17 +46,6 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                 term: term.value
             };
 
-            // Execute a function when the user releases a key on the keyboard
-            term.addEventListener("keyup", function(event) {
-                // Number 13 is the "Enter" key on the keyboard
-                if (KeyboardEvent.keycode === 13) {
-                    // Cancel the default action, if needed
-                    event.preventDefault();
-                    // Trigger the button element with a click
-                    document.getElementById("myBtn").click();
-                }
-            })
-
             // fetch call with header options
             fetch('/search/term/', {
                 method: "POST",
@@ -67,6 +56,7 @@ inspiration from https://www.youtube.com/watch?v=QKcVjdLEX_s
                     "content-type": "application/json"
                 })
             })
+
                 // async then replies with response header
                 .then(function (response) {
                     // prepare HTML search result container for new output
