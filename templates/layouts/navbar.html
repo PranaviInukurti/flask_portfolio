@@ -10,10 +10,12 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" style="font-size: 22px;">
+                    <div>
+                        <a class="nav-link" href={{ url_for('index') }}>Home</a>
+                    </div>
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
                         <button onclick="myFunction1()" class="dropbtn">About Us</button>
                         <div id="Dropdown1" class="dropdown-content">
-                            <a class="nav-link" href={{ url_for('index') }}>Home</a>
                             <a class="nav-link" href={{ url_for('linda') }}>Linda</a>
                             <a class="nav-link" href={{ url_for('alice') }}>Alice</a>
                             <a class="nav-link" href={{ url_for('saathvika') }}>Saathvika</a>
@@ -44,16 +46,16 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
             <style>
                 .dropbtn {
-                    background-color: black;
-                    color: ghostwhite;
-                    padding: 16px;
-                    font-size: 22px;
-                    border: none;
+                    background-color: #374db9;
+                    color: #ede9f3;
+                    padding: 7px;
+                    font-size: 16px;
+                    border: 90px;
                     cursor: pointer;
                 }
 
                 .dropbtn:hover, .dropbtn:focus {
-                    background-color: ghostwhite;
+                    background-color: #8c99d5;
                     color: black;
                 }
 
@@ -74,12 +76,12 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
                 .dropdown-content a {
                     color: black;
-                    padding: 12px 16px;
+                    padding: 7px 9px;
                     text-decoration: none;
                     display: block;
                 }
 
-                .dropdown a:hover {background-color: ghostwhite;}
+                .dropdown a:hover {background-color: #b6c0ef;}
 
                 .show {display: block;}
             </style>
