@@ -10,7 +10,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
         <div class="navbar-nav">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav" style="font-size: 22px;">
-                    <div>
+                    <div class="dropdown" style="font-family: monospace; color: ghostwhite">
                         <a class="nav-link" href={{ url_for('index') }}>Home</a>
                     </div>
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
@@ -48,8 +48,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
             <style>
                 .dropbtn {
-                    background-color: #374db9;
-                    color: #ede9f3;
+                    background-color: #f7f7fc;
+                    color: #374db9;
                     padding: 7px;
                     font-size: 16px;
                     border: 90px;
@@ -58,7 +58,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
                 .dropbtn:hover, .dropbtn:focus {
                     background-color: #8c99d5;
-                    color: black;
+                    color: #232323;
                 }
 
                 .dropdown {
