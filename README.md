@@ -17,21 +17,45 @@
 
 ---
 ## Table of Contents
-1. [Week 3 - WIP Project Review](#Week3)
-2. [Week 2 - Home Pages](#Week2)
-3. [Week 1 - Project Approval](#Week1)
-4. [Week 0 - Introduction](#Week0)
+1. [Week 4 - "Time to be Resolute"](#Week4)
+2. [Week 3 - WIP Project Review](#Week3)
+3. [Week 2 - Home Pages](#Week2)
+4. [Week 1 - Project Approval](#Week1)
+5. [Week 0 - Introduction](#Week0)
 ---
+
+###   <h2 id="Week4">Week 4 - "Time to be Resolute": Due 1/7</h2>
+- <a href="https://github.com/samayass/flask_portfolio/projects/1?card_filter_query=milestone%3A%22week+4+-+%5C%22time+to+be+resolute%5C%22%22">Scrum Board</a>
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith ||<a href="">Ticket</a><br>|/5|
+| Pranavi Inukurti ||<a href="">Ticket</a><br>|/5|
+| Alice Tang ||<a href="">Ticket</a><br>|/5|
+| Samaya Sankuratri ||<a href="">Ticket</a><br>|/5|
+| Linda Liu ||<a href="">Ticket</a><br>|/5|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Pranavi Inukurti | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Alice Tang | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Samaya Sankuratri | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Linda Liu | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+
+
 ###   <h2 id="Week3">Week 3 - WIP Project Review: Due 12/16</h2>
 - <a href="https://github.com/samayass/flask_portfolio/projects/1">Scrum Board</a>
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Asynch Access to a Database|<a href="http://75.6.164.25:8080/saathvika/">Ticket</a><br>|/8|
-| Pranavi Inukurti |README, Tickets, Wiki|<a href="http://75.6.164.25:8080/pranavi/">Ticket</a><br>|/8|
-| Alice Tang |Bootstrap Layouts|<a href="http://75.6.164.25:8080/alice/">Ticket</a><br>|/8|
-| Samaya Sankuratri |Website with URL, Updating Website|<a href="http://75.6.164.25:8080/samaya/">Ticket</a><br>|/8|
-| Linda Liu |GitHub issues|<a href="http://75.6.164.25:8080/linda/">Ticket</a><br>|/8|
+| Saathvika Ajith |Asynch Access to a Database|<a href="http://75.6.164.25:8080/saathvika/">Ticket</a><br>|8/8|
+| Pranavi Inukurti |README, Tickets, Wiki|<a href="http://75.6.164.25:8080/pranavi/">Ticket</a><br>|8/8|
+| Alice Tang |Bootstrap Layouts|<a href="http://75.6.164.25:8080/alice/">Ticket</a><br>|8/8|
+| Samaya Sankuratri |Website with URL, Updating Website|<a href="http://75.6.164.25:8080/samaya/">Ticket</a><br>|8/8|
+| Linda Liu |GitHub issues|<a href="http://75.6.164.25:8080/linda/">Ticket</a><br>|8/8|
 
 - Individual Scoring
 
@@ -49,11 +73,11 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Individual Homepage|<a href="http://75.6.164.25:8080/saathvika/">Ticket</a><br>|/8|
-| Pranavi Inukurti |Individual Homepage|<a href="http://75.6.164.25:8080/pranavi/">Ticket</a><br>|/8|
-| Alice Tang |Individual Homepage|<a href="http://75.6.164.25:8080/alice/">Ticket</a><br>|/8|
-| Samaya Sankuratri |Individual Homepage|<a href="http://75.6.164.25:8080/samaya/">Ticket</a><br>|/8|
-| Linda Liu |Individual Homepage|<a href="http://75.6.164.25:8080/linda/">Ticket</a><br>|/8|
+| Saathvika Ajith |Individual Homepage|<a href="http://75.6.164.25:8080/saathvika/">Ticket</a><br>|8/8|
+| Pranavi Inukurti |Individual Homepage|<a href="http://75.6.164.25:8080/pranavi/">Ticket</a><br>|8/8|
+| Alice Tang |Individual Homepage|<a href="http://75.6.164.25:8080/alice/">Ticket</a><br>|8/8|
+| Samaya Sankuratri |Individual Homepage|<a href="http://75.6.164.25:8080/samaya/">Ticket</a><br>|8/8|
+| Linda Liu |Individual Homepage|<a href="http://75.6.164.25:8080/linda/">Ticket</a><br>|8/8|
 
 - Individual Scoring
 
