@@ -13,7 +13,7 @@
             }
         }
 
-        function getLyric() {
+        function getWiki() {
             fetch("https://hargrimm-wikihow-v1.p.rapidapi.com/steps?count=3", {
 	            "method": "GET",
 	            "headers": {
@@ -62,7 +62,7 @@
             </p>
             <div style="background-color: rgba(83,105,122, 0.8)">
             <p style="font-size: 50px; padding-top: 15px; color: #99ba6d; font-family: Blippo">Out of Context WikiHow API:</p>
-            <button id="get-lyric" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="getLyric()">Get me some Instructions!</button>
+            <button id="get-lyric" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="getWiki()">Get me some Instructions!</button>
             <div id="display-lyric1" style="margin-top: 25px; font-size: 30px; color: #99ba6d; font-weight: 600; font-family: monospace; text-align: center">No Text Yet</div>
             <div id="display-lyric2" style="margin-top: 10px; font-size: 30px; color: #99ba6d; font-weight: 600; font-family: monospace; text-align: center">No Text Yet</div>
             <div id="display-lyric3" style="margin-top: 10px; font-size: 30px; color: #99ba6d; font-weight: 600; font-family: monospace; text-align: center">No Text Yet</div>
