@@ -9,9 +9,12 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav" style="font-size: 22px;">
-                    <div class="dropdown" style="font-family: monospace; color: ghostwhite">
-                        <a class="nav-link" href={{ url_for('index') }}>Home</a>
+                <div class="navbar-nav" style="font-family: monospace; background-color: #374db9">
+                    <div>
+                        <a style="color: ghostwhite; font-size: 21px;" class="nav-link" href={{ url_for('index') }}>Home</a>
+                    </div>
+                    <div>
+                        <a style="color: ghostwhite; font-size: 21px;" class="nav-link" href={{ url_for('studyroom') }}>StudyRoom</a>
                     </div>
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
                         <button onclick="myFunction1()" class="dropbtn">About Us</button>
@@ -33,10 +36,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     </div>
 
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
-                        <button onclick="myFunction3()" class="dropbtn">Extra</button>
+                        <button onclick="myFunction3()" class="dropbtn">Planner</button>
                         <div id="Dropdown3" class="dropdown-content">
-                            <a class="nav-link" href={{ url_for('index') }}>Home</a>
-                            <a class="nav-link" href={{ url_for('studyroom') }}>StudyRoom</a>
                             <a class="nav-link" href={{ url_for('todo') }}>To-Do List</a>
                         </div>
                     </div>
@@ -48,17 +49,31 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
 
             <style>
                 .dropbtn {
-                    background-color: #f7f7fc;
-                    color: #374db9;
+                    background-color: #374db9;
+                    color: ghostwhite;
                     padding: 7px;
-                    font-size: 16px;
+                    font-size: 21px;
+                    border: 90px;
+                    cursor: pointer;
+                }
+
+                .nav-link {
+                    background-color: #374db9;
+                    color: ghostwhite;
+                    padding: 7px;
+                    font-size: 21px;
                     border: 90px;
                     cursor: pointer;
                 }
 
                 .dropbtn:hover, .dropbtn:focus {
                     background-color: #8c99d5;
-                    color: #232323;
+                    color: black;
+                }
+
+                .nav-link:hover, .nav-link:focus {
+                    background-color: #8c99d5;
+                    color: black;
                 }
 
                 .dropdown {
