@@ -29,11 +29,11 @@
 
 | Name | Requirement | Evidence | Grade |
 |:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith ||<a href="">Ticket</a><br>|/5|
-| Pranavi Inukurti ||<a href="">Ticket</a><br>|/5|
-| Alice Tang ||<a href="">Ticket</a><br>|/5|
-| Samaya Sankuratri ||<a href="">Ticket</a><br>|/5|
-| Linda Liu ||<a href="">Ticket</a><br>|/5|
+| Saathvika Ajith |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Pranavi Inukurti |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Alice Tang |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Samaya Sankuratri |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Linda Liu |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
 
 - Individual Scoring
 
