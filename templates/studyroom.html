@@ -35,10 +35,27 @@
 
 
         <div id="wrapper">
+            <div style="display: flex">
+                <div>
             <audio loop controls autoplay>
                 <source src="/static/rain.mp3" type="audio/mpeg">
             </audio>
-            <div style="text-align:left; font-family: Baskerville; font-size: larger">
+                </div>
+
+            <!-Digital Clock->
+            <div class="container" id="clock" style="display: block;">
+
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+                <div id="clock" style="font-family: cursive">8:10:45</div>
+
+                <script src="/static/js/clock.js"></script>
+
+            </div>
+            </div>
+            <div style="margin-top: -100px;text-align:left; font-family: Baskerville; font-size: larger">
                 <div>
 
                     <h1>Study Room</h1>
@@ -76,18 +93,7 @@
 
                     <br>
 
-                    <!-Digital Clock->
-                    <div class="container" id="clock">
 
-                        <meta charset="UTF-8" />
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-                        <div id="clock">8:10:45</div>
-
-                        <script src="/static/js/clock.js"></script>
-
-                    </div>
                 </div>
             </div>
     </body>
