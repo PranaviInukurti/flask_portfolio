@@ -6,18 +6,19 @@
     <h1 id="abt_name"> Alice Tang</h1>
 
     <head>
+    <body style="background-image: url('../static/assets/aliceBG.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
     <div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
         <div>
-            <h1 style="background-color: #bdbde1; font-family: 'Blippo'; font-size: 22px; text-align: center; padding: 15px; color: #33268a;">Hello <span id="myName">{{name}}</span>, welcome to Alice's Individual Homepage</h1>
+            <h1 style="background-color: rgb(233,235,243,0.8); font-family: 'Blippo'; font-size: 22px; text-align: center; padding: 15px; color: #33268a;">Hello <span id="myName">{{name}}</span>, welcome to Alice's Individual Homepage</h1>
             <form action="/alice/" id="alice" method="POST" >
                 <label for="name">Enter Your Name</label>
                 <input name="name" id="name">
                 <input type="submit" value="Submit" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
-            <p style="background-color: #bdbde1">
+            <p style="background-color: rgb(233,235,243,0.8)">
                 <img src="/static/assets/alicewithmask.jpg" style="height: 300px; width: 300px;" id="imgClickAndChange" onclick="changeImage()"/>
             </p>
-            <h2 style="background-color: #bdbde1; font-family: 'Blippo'; font-size: 15px; text-align: center; padding: 10px; color: #33268a;">Click The Image</h2>
-            <h3 style="background-color: #bdbde1; font-family: 'Blippo'; font-size: 20px; text-align: left; padding: 15px; color: #33268a;">Trimester 2 Resources:
+            <h2 style="background-color: rgb(233,235,243,0.8); font-family: 'Blippo'; font-size: 15px; text-align: center; padding: 10px; color: #33268a;">Click The Image</h2>
+            <h3 style="background-color: rgb(233,235,243,0.8); font-family: 'Blippo'; font-size: 20px; text-align: left; padding: 15px; color: #33268a;">Trimester 2 Resources:
                 <a id="journal" href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Daily Journal,</a>
                 <a id="journal" href="https://docs.google.com/document/d/1Fgip2Fr26XOBEdhVSpi1QiwjZowhopY57o4UpwbYZzo/edit?usp=sharing">StudyOwl Brainwrite,</a>
                 <a id="journal" href="https://www.figma.com/file/9CvmDXms787Ban053NP0Gf/StudyOwl?node-id=4%3A2">StudyOwl Wireframes,</a>
