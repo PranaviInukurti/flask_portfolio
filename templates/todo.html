@@ -1,10 +1,9 @@
 {% extends "layouts/project.html" %}
 {% block body %}
     <!DOCTYPE html>
-
+    <body style="background-image: url('../static/assets/todoBG.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
     <style>
         .navbar{
-            z-index: 900;
             width: 100%;
             margin-bottom: 15px;
         }
@@ -37,7 +36,7 @@
         button {
             background: none;
             border: 0px;
-            color: #888;
+            color: #4d4d4d;
             font-size: 15px;
             width: 60px;
             margin: 10px 0 0;
@@ -115,7 +114,7 @@
         /* Completed */
         #completed-tasks label {
             text-decoration: line-through;
-            color: #888;
+            color: #232323;
         }
 
         /* Edit Task */
@@ -151,6 +150,7 @@
             <li><input type="checkbox" checked><label>Essay Final Draft</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
         </ul>
     </div>
+
 
     <script>
         var taskInput = document.getElementById("new-task"); //new-task

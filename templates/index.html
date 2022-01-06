@@ -9,6 +9,17 @@
             <h1 style id="StudyOwl" >StudyOwl</h1>
             <p style id="bestway">THE BEST WAY TO STUDY, IS WITH STUD</p>
             <p style id="tool">StudyOwl is a academic tool designed to help students study in a more focused and <br> efficient manner. StudyOwl offers features such as a customizable study buddy owl, <br> a StudyRoom, a To-Do list, a self timer, and many more that inspires students to study.</p>
+            <p style id="checkout">Check out some of our study tools below!</p>
+            <a href={{ url_for('studyroom') }}>
+                <img alt="studyroom" src="/static/assets/studyroomICON.png"
+                     width=240" height="150">
+            </a>
+            <p style id="studyroom">StudyRoom</p>
+            <a href={{ url_for('todo') }}>
+                <img alt="todo" src="/static/assets/todoICON.png"
+                     width=240" height="150">
+            </a>
+            <p style id="todo">To-Do List </p>
         </div>
     </div>
 
@@ -43,7 +54,7 @@
             font-weight: 800;
             text-align: left;
             padding: 15px;
-            color: #697ace;
+            color: #DDA658;
         }
         #tool{
             position: relative;
@@ -55,6 +66,17 @@
             text-align: left;
             padding: 15px;
             color: #4e5fb4;
+        }
+        #checkout{
+            position: relative;
+            left: 60px;
+            down: 450px;
+            font-family: 'Helvetica';
+            font-size: 25px;
+            font-weight: 700;
+            text-align: left;
+            padding: 15px;
+            color: #697ace;
         }
     </style>
 
