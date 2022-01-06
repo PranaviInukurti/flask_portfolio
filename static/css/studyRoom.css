@@ -38,7 +38,7 @@ h1 {
     text-align: left;
     padding: 15px;
     color: white;
-    text-shadow: 5px 5px black;
+    text-shadow: 5px 5px darkgray;
     font-size: 50px;
 }
 .navbar {
@@ -206,7 +206,7 @@ ul li.editMode label {
 #get-quote {
     margin-top: 20px;
     height: 35px;
-    width: 130px;
+    width: 88px;
     background: white;
     color: black;
 }
@@ -214,7 +214,7 @@ ul li.editMode label {
 #show-todo {
     margin-top: 20px;
     height: 35px;
-    width: 130px;
+    width: 88px;
     background: white;
     color: black;
 }
@@ -222,7 +222,7 @@ ul li.editMode label {
 #show-clock {
     margin-top: 20px;
     height: 35px;
-    width: 130px;
+    width: 88px;
     background: white;
     color: black;
 }
@@ -230,16 +230,16 @@ ul li.editMode label {
 #on-off {
     margin-top: 20px;
     height: 35px;
-    width: 130px;
+    width: 88px;
     background: white;
     color: black;
 }
 
 /* digital clock */
 #clock {
-    font-size: 135px;
-    width: 900px;
-    margin: 50px;
+    font-size: 35px;
+    width: 215px;
+    margin-left: 500px;
     text-align: center;
     border: 2px solid black;
     border-radius: 20px;
