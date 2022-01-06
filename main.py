@@ -18,6 +18,7 @@ def samaya():
     return render_template("samaya.html")
 
 
+
 @app.route('/alice/')
 def alice():
     url = "https://brianiswu-cat-facts-v1.p.rapidapi.com/facts"
