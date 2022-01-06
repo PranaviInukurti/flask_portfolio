@@ -3,6 +3,8 @@
     <!DOCTYPE html>
 
     <link rel="stylesheet" type="text/css" href="/static/css/studyRoom.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/all.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/static/js/linda.js"></script>
     <body>
@@ -58,21 +60,20 @@
             <div style="margin-top: -100px;text-align:left; font-family: Baskerville; font-size: larger">
                 <div>
 
-                    <h1>Study Room</h1>
+                    <h1 style="font-family: 'cursive'">Study Room</h1>
 
 
                     <!-Random Motivational Quote Api->
-                    <button id="get-quote" style="margin-top: 20px; margin-right: 800px; height: 35px" onclick="newQuote()">Get me a quote</button>
-                    <button id="on-off" style="color: black; margin-top: 20px; margin-right: 800px; height: 35px" onclick="onOff()">On and off</button>
+                    <div style="display:flex"> <button id="get-quote" style="margin-top: 20px; margin-right: 800px; height: 35px" onclick="newQuote()"><img src="static/assets/STUD.png" alt="Stud" width="15px" height="15px"></button> <button id="on-off" style="color: black; margin-top: 20px; margin-right: 800px; height: 35px" onclick="onOff()"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2F88icon.com%2Ficon%2Fvsbvsvsv.html&psig=AOvVaw2wb_YUb3xBLLu4vmsepKM-&ust=1641546313686000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjh1N_inPUCFQAAAAAdAAAAABAP" alt="X Sign" width="15" height="15"></button> </div>
                     <div id="display-quote" style="margin-top: 10px; margin-right: 200px; font-size: 20px;color: white;font-weight: 600; text-align: left">No quote yet</div>
 
                     <br>
 
 
                     <!-Todo List->
-                    <button id="show-todo" onclick="showTodo()">Show Todo List</button>
-                    <div class="container" id="todo-list">
-                        <h2>TODO LIST</h2>
+                    <div style="display: flex"> <button id="show-todo" onclick="showTodo()"><img src="https://th.bing.com/th/id/OIP.VjQF4ZjCQrpTZxMCo-PdFgHaHa?w=218&h=218&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Plus Sign" width="15" height="15"></button> <div style="color: white;margin-top: 28px; margin-left:5px;font-family: cursive"> Todo List </div> </div>
+                    <div style="margin-left:-5px"; class="container" id="todo-list">
+
                         <h3>Add Item</h3>
                         <p>
                             <input id="new-task" type="text"><button onclick="addTask()">Add</button>
