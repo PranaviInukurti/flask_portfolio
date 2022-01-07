@@ -13,9 +13,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
                         <a style="color: ghostwhite; font-size: 21px;" class="nav-link" href={{ url_for('index') }}>Home</a>
                     </div>
-                    <div>
-                        <a style="color: ghostwhite; font-size: 21px;" class="nav-link" href={{ url_for('studyroom') }}>StudyRoom</a>
-                    </div>
+
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
                         <button onclick="myFunction1()" class="dropbtn">About Us</button>
                         <div id="Dropdown1" class="dropdown-content">
@@ -36,8 +34,9 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     </div>
 
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
-                        <button onclick="myFunction3()" class="dropbtn">Planner</button>
+                        <button onclick="myFunction3()" class="dropbtn">Tools</button>
                         <div id="Dropdown3" class="dropdown-content">
+                            <a class="nav-link" href={{ url_for('studyroom') }}>StudyRoom</a>
                             <a class="nav-link" href={{ url_for('todo') }}>To-Do List</a>
                         </div>
                     </div>
