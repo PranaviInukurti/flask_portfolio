@@ -34,7 +34,7 @@
 
 
 # GitHub Activity
-### <a href="https://github.com/sarayu-pr11/team-narks/graphs/contributors" target="_blank">Repo Insights</a>
+### <a href="https://github.com/samayass/flask_portfolio/graphs/contributors" target="_blank">Repo Insights</a>
 <table>
   <tr>
     <th>User Activity</th>
