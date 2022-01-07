@@ -1,21 +1,56 @@
-###   <h2 id="Week3">Week 3 - WIP Project Review: Due 12/16</h2>
-- <a href="https://github.com/samayass/flask_portfolio/projects/1">Scrum Board</a>
+# Time Box
+<table>
+   <tr>
+    <th>Week</th>
+    <th>Stand Up Theme</th>
+    <th>Test Prep</th>
+    <th>Tech Talk</th>
+    <th>Canvas</th>
+   </tr>
+   <tr>
+    <td>4</td>
+    <td>Procedures, Blueprint, <a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/GitHub-Pages-and-Jekyll">Jekyll</a></td>
+    <td><a href="https://apclassroom.collegeboard.org/103/home?unit=3">3.11,3.12.3.13</a></td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri2-TT4-Binary-Search,-Calling-Procedures,-and-Developing-Procedures">TT4</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/1956804">3, 4, 5</a></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Certbot, CB-exam</td>
+    <td><a href="https://apclassroom.collegeboard.org/103/assignments?quizId=4323650&status=assigned">MCQ Test</a></td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2:-Tech-Talk-3---Deployment---Subdomains-and-Certbot">TT3</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/1943626">WIP Review</a></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Databases, Policies</td>
+    <td><a href="https://apclassroom.collegeboard.org/103/home?unit=2">2.3,2.4</a></td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2:-Tech-Talk-2-SQLite-Database-Intro">TT2</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/1943619">Home Pages</a></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>SCSS, Async</td>
+    <td><a href="https://apclassroom.collegeboard.org/103/home?unit=1">1.3,1.4</a></td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2:-Tech-Talk-1.1---Organizing--Bootstrap-Files,-Templates-layouts,-and-Sassy">TT1.1, </a><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2:-Tech-Talk-1.2---Accessing-data-Asynchronously">TT1.2</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/1943423">Project Approval</a></td>
+  </tr>
+</table>
 
-| Name | Requirement | Evidence | Grade |
-|:----:|:-----------:|:--------:|:-----:|
-| Saathvika Ajith |Asynch Access to a Database|<a href="http://75.6.164.25:8080/saathvika/">Ticket</a><br>|8/8|
-| Pranavi Inukurti |README, Tickets, Wiki|<a href="http://75.6.164.25:8080/pranavi/">Ticket</a><br>|8/8|
-| Alice Tang |Bootstrap Layouts|<a href="http://75.6.164.25:8080/alice/">Ticket</a><br>|8/8|
-| Samaya Sankuratri |Website with URL, Updating Website|<a href="http://75.6.164.25:8080/samaya/">Ticket</a><br>|8/8|
-| Linda Liu |GitHub issues|<a href="http://75.6.164.25:8080/linda/">Ticket</a><br>|8/8|
 
-- Individual Scoring
-
-| Name | Journal with TT & TPT Notes | Grade |
-|:----:|:---------------------------:|:-----:|
-| Saathvika Ajith | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
-| Pranavi Inukurti | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
-| Alice Tang | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
-| Samaya Sankuratri | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
-| Linda Liu | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
-
+# GitHub Activity
+### <a href="https://github.com/nighthawkcoders/nighthawk_csp/graphs/contributors" target="_blank">CSP Repo Insights</a>
+<table>
+  <tr>
+    <th>User Activity</th>
+    <th>Profile</th>
+    <th>Issues</th>
+    <th>Commits</th>
+  </tr>
+  <tr>
+    <td>John Mortensen</td>
+    <td><a href="https://github.com/jm1021" target="_blank">Profile</a></td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/issues?q=assignee%3Ajm1021" target="_blank">Issues</a></td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/commits?author=jm1021" target="_blank">Commits</a></td>
+  </tr>
+</table>
