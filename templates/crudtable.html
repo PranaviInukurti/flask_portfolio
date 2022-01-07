@@ -44,6 +44,78 @@
 
         }); //end DOMContentLoaded listener
 
+        function full() {
+            document.getElementById("h1").style.visibility = "visible"
+            document.getElementById("h2").style.visibility = "visible"
+            document.getElementById("h3").style.visibility = "visible"
+            document.getElementById("h4").style.visibility = "visible"
+            document.getElementById("h5").style.visibility = "visible"
+
+            const x = document.getElementById("myTable1").rows.length;
+            const uid = document.getElementsByClassName("col1");
+            const nid = document.getElementsByClassName("col2");
+            const eid = document.getElementsByClassName("col3");
+            const pwd = document.getElementsByClassName("col4");
+            const phid = document.getElementsByClassName("col5");
+
+            for (let i=0; i<x; i++){
+                const eachuid = uid[i];
+                eachuid.style.visibility = "visible";
+                const eachnid = nid[i];
+                eachnid.style.visibility = "visible";
+                const eacheid = eid[i];
+                eacheid.style.visibility = "visible";
+                const eachpwd = pwd[i];
+                eachpwd.style.visibility = "visible";
+                const eachphid = phid[i];
+                eachphid.style.visibility = "visible";
+            }
+
+        }
+
+        function contacts() {
+            document.getElementById("h1").style.visibility = "collapse"
+            document.getElementById("h2").style.visibility = "visible"
+            document.getElementById("h3").style.visibility = "visible"
+            document.getElementById("h4").style.visibility = "collapse"
+            document.getElementById("h5").style.visibility = "visible"
+
+            const x = document.getElementById("myTable1").rows.length;
+            const uid = document.getElementsByClassName("col1");
+            const pwd = document.getElementsByClassName("col4");
+            const phid = document.getElementsByClassName("col5");
+
+            for (let i=0; i<x; i++){
+                const eachuid = uid[i];
+                eachuid.style.visibility = "collapse";
+                const eachpwd = pwd[i];
+                eachpwd.style.visibility = "collapse";
+                const eachphid = phid[i];
+                eachphid.style.visibility = "visible";
+            }
+        }
+
+        function accounts() {
+            document.getElementById("h1").style.visibility = "collapse"
+            document.getElementById("h2").style.visibility = "visible"
+            document.getElementById("h3").style.visibility = "visible"
+            document.getElementById("h4").style.visibility = "visible"
+            document.getElementById("h5").style.visibility = "collapse"
+
+            const x = document.getElementById("myTable1").rows.length;
+            const uid = document.getElementsByClassName("col1");
+            const phid = document.getElementsByClassName("col5");
+            const pwd = document.getElementsByClassName("col4");
+
+            for (let i=0; i<x; i++){
+                const eachuid = uid[i];
+                eachuid.style.visibility = "collapse";
+                const eachphid = phid[i];
+                eachphid.style.visibility = "collapse";
+                const eachpwd = pwd[i];
+                eachpwd.style.visibility = "visible";
+            }
+        }
     </script>
 {% endblock %}
 
@@ -60,26 +132,26 @@
             <div class="p-5 mb-4 bg-light text-dark rounded-3">
                 <h2>Table Viewer</h2>
                 <div class="row align-items-md-stretch">
-                    <table class="table">
+                    <table id="myTable" class="table">
                         <tbody>
                         <tr>
-                            <td><a href={{url_for('crudtable')}}>Full Table</a></td>
-                            <td><a href={{url_for('crudtable')}}>Contact Info</a></td>
-                            <td><a href={{url_for('crudtable')}}>Account Info</a></td>
+                            <td><button type="button" id="full" onclick="full()">Full Table</button></td>
+                            <td><button type="button" id="contacts" onclick="contacts()">Contact Info</button></td>
+                            <td><button type="button" id="accounts" onclick="accounts()">Account Info</button></td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="row align-items-md-stretch">
                     <div class="container-fluid py-5">
-                        <table class="table">
+                        <table id="myTable1" class="table">
                             <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Password</th>
-                                <th>Phone</th>
+                                <th id="h1">ID</th>
+                                <th id="h2">Name</th>
+                                <th id="h3">Email</th>
+                                <th id="h4">Password</th>
+                                <th id="h5">Phone</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -92,11 +164,11 @@
                                 {% set pn = "" ~ row['phone'] %}
                                 {% set pnf = "(" ~ pn[0:3] ~ ")" ~ pn[3:6] ~ "-" ~ pn[6:10] %}
                                 <tr>
-                                    <td>{{ row['userID'] }}</td>
-                                    <td>{{ row['name'] }}</td>
-                                    <td>{{ row['email'] }}</td>
-                                    <td>{{ row['password'] }}</td>
-                                    <td>{{ pnf }}</td>
+                                    <td class="col1" id="r1">{{ row['userID'] }}</td>
+                                    <td class="col2" id="r2">{{ row['name'] }}</td>
+                                    <td class="col3" id="r3">{{ row['email'] }}</td>
+                                    <td class="col4" id="r4">{{ row['password'] }}</td>
+                                    <td class="col5" id="r5">{{ pnf }}</td>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -124,7 +196,7 @@
                         <tbody>
                         <tr>
                             <td><input type="text" name="name" id="name" required></td>
-                            <td><input type="email" name="email" id="email" placeholder="abc@xyz.org" required></td>
+                            <td><input type="email" name="email" id="email" placeholder="abc@gmail.com" required></td>
                             <td><input type="password" name="password" id="password" required></td>
                             <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
                             <td><input type="submit" value="Create"></td>
