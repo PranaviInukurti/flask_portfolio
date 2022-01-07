@@ -3,20 +3,31 @@
 
     <h1 id="abt_name"> Samaya Sankuratri</h1>
 
-{#    <h1><span>SAMAYA</span></h1>#}
-
 
     </head>
-    <body style="background-image: url('../static/img/clouds.png'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <body>
+    <!--     light/dark mode container -->
+    <div class="wrapper-color-switch">
+        <input type="checkbox" id="input-color-switch">
+        <label for="input-color-switch" class="color-switch">
+            <div class="color-switch-toggle"></div>
+        </label>
+    </div>
+
+
     <div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
         <div>
-            <h1 style="background-color: #BAC9DE; font-family: 'Blippo'; font-size: 22px; text-align: center; padding: 15px; color: #2A0C4E;">This is Samaya Sankuratri's Individual Homepage!</h1>
-            <p style="background-color: #BAC9DE">
+            <h1 id="header1" style="font-family: 'Blippo'; font-size: 22px; text-align: center; padding: 15px;">Hello <span id="myName">{{name}}</span>, welcome to Samaya's Individual Homepage</h1>
+            <form action="/samaya/" id="samaya" method="POST" >
+                <label for="name" id="name1">Enter Your Name</label>
+                <input name="name" id="name">
+                <input type="submit" value="Submit" id="submit" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+            <p id="p1">
                 <img src="/static/img/samaya_with_mask.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
                 <br>
             </p>
-            <h2 style="background-color: #BAC9DE; font-family: 'Blippo'; font-size: 15px; text-align: center; padding: 10px; color: #2A0C4E;">Click Image</h2>
-            <h3 style="background-color: #BAC9DE; font-family: 'Blippo'; font-size: 20px; text-align: left; padding: 15px; color: #2A0C4E;">Links to Work for the Trimester:
+            <h2 id="header2" style=" font-family: 'Blippo'; font-size: 15px; text-align: center; padding: 10px; ">Click Image</h2>
+            <h3 id="header3" style=" font-family: 'Blippo'; font-size: 20px; text-align: left; padding: 15px; ">Links to Work for the Trimester:
                 <a id="journal" href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Daily Journal,</a>
                 <a id="journal" href="https://docs.google.com/document/d/1Fgip2Fr26XOBEdhVSpi1QiwjZowhopY57o4UpwbYZzo/edit?usp=sharing">StudyOwl Brainwrite,</a>
                 <a id="journal" href="https://www.figma.com/file/9CvmDXms787Ban053NP0Gf/StudyOwl?node-id=4%3A2">StudyOwl Wireframes,</a>
@@ -27,12 +38,12 @@
             <div class="quoteContainer">
                 <div id="quote"></div>
                 <div id="author"></div>
-                <button id="getQuote" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: #BAC9DE" onclick="Quote()">Get me a Quote!</button>
+                <button id="getQuote" style="height: 35px; font-family: 'Blippo'; font-size: 15px;" onclick="Quote()">Get me a Quote!</button>
             </div>
 
 
 
-
+            </form>
         </div>
     </div>
     </body>
@@ -40,70 +51,121 @@
 
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+        :root {
+            --clr-background:#C5DAC1;
+            --clr-base:#BCD0C7;
+            --clr-font: #2A0C4E;
+            --clr-shadow: #2A0C4E;
+
+        }
+
+        .dark-mode {
+            --clr-background:#1B264F;
+            --clr-base:#576CA8;
+            --clr-font: #F5F3F5;
+            --clr-shadow: #576CA8;
+        }
+
+        .wrapper-color-switch {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+
+          .color-switch {
+              width: 4em;
+              height: 2em;
+              border-radius: 10em;
+              background: var(--clr-base);
+              border: 2px solid var(--clr-base);
+              position: absolute;
+              right: 75px;
+              cursor: pointer;
+          }
+
+          .color-switch-toggle {
+              width: 1.6em;
+              height: 1.6em;
+              background: var(--clr-base);
+              position: absolute;
+              border-radius: 10em;
+              top: 0.2em;
+              left: 0.2em;
+              cursor: pointer;
+              transition: all 250ms ease-in-out;
+          }
 
 
-        {#span {#}
-        {#    position: absolute;#}
-        {#    left: 50%;#}
-        {#    top: 50%;#}
-        {#    transform: translate(-50%, -50%);#}
-        {#    display: block;#}
-        {#    color: #2A0C4E;#}
-        {#    font-size: 124px;#}
-        {#    letter-spacing: 8px;#}
-        {#    cursor: pointer;#}
-        {##}
-        {#}#}
-        {##}
-        {#span::before {#}
-        {#    content: "SAMAYA";#}
-        {#    position: absolute;#}
-        {#    color: transparent;#}
-        {#    background-image: repeating-linear-gradient(#}
-        {#            45deg,#}
-        {#            transparent 0,#}
-        {#            transparent 2px,#}
-        {#            white 2px,#}
-        {#            white 4px#}
-        {#    );#}
-        {#    -webkit-background-clip: text;#}
-        {#    top: 0px;#}
-        {#    left: 0;#}
-        {#    z-index: -1;#}
-        {#    transition: 1s;#}
-        {#}#}
-        {##}
-        {#span::after {#}
-        {#    content: "SAMAYA";#}
-        {#    position: absolute;#}
-        {#    color: transparent;#}
-        {#    background-image: repeating-linear-gradient(#}
-        {#            135deg,#}
-        {#            transparent 0,#}
-        {#            transparent 2px,#}
-        {#            white 2px,#}
-        {#            white 4px#}
-        {#    );#}
-        {#    -webkit-background-clip: text;#}
-        {#    top: 0px;#}
-        {#    left: 0px;#}
-        {#    transition: 1s;#}
-        {#}#}
-        {##}
-        {#span:hover:before {#}
-        {#    top: 10px;#}
-        {#    left: 10px;#}
-        {#}#}
-        {##}
-        {#span:hover:after {#}
-        {#    top: -10px;#}
-        {#    left: -10px;#}
-        {#}#}
-        {##}
-        {#body{#}
-        {#    background: #A0C1D1;#}
-        {#}#}
+          .color-switch::before {
+              content: "Light Mode On";
+              position: absolute;
+              display: inline-block;
+              width: 12em;
+              left: -8em;
+              top: 0.4em;
+              color: var(--clr-font);
+          }
+
+          #input-color-switch:checked ~ label .color-switch-toggle {
+              transform: translatex(2em);
+          }
+
+          #input-color-switch:checked ~ .color-switch::before {
+              content: "Dark Mode On";
+          }
+
+          #input-color-switch {
+              display: none;
+          }
+
+        body{
+            background-color: var(--clr-background);
+        }
+
+        #name1 {
+            font-family: 'Blippo';
+            color:var(--clr-font);
+        }
+
+        #submit {
+            font-family: 'Blippo';
+            background-color: var(--clr-base);
+
+        }
+
+
+        #header1{
+            background-color: var(--clr-base);
+            color:var(--clr-font);
+        }
+
+        #p1 {
+            background-color: var(--clr-base);
+            color:var(--clr-font);
+        }
+
+        #header2{
+            background-color: var(--clr-base);
+            color:var(--clr-font);
+        }
+
+        #header3{
+            background-color: var(--clr-base);
+            color:var(--clr-font);
+        }
+
+        #journal {
+            background-color: var(--clr-base);
+            color:var(--clr-font);
+        }
+
+        #getQuote {
+            background-color: var(--clr-base);
+            color:var(--clr-font);
+        }
+
 
         #abt_name {
             font-family: 'Ephesis';
@@ -111,11 +173,12 @@
             text-align: center;
             padding: 15px;
             color: white;
-            text-shadow: 5px 5px #2A0C4E;
+            text-shadow: 5px 5px var(--clr-shadow);;
 
         body, #quote, #author {
             display: flex;
             justify-content: center;
+
         }
 
         .quoteContainer {
@@ -125,19 +188,23 @@
             padding: 50px;
             width: 80%;
             border: 1px solid grey;
-            border-radius: 20px;
+            border-radius: 20em;
+            color:var(--clr-font);
         }
 
         #quote {
             font-family: "Bradley Hand ITC";
             text-align: center;
             font-size: 20px;
+            color:var(--clr-font);
+
         }
 
         #author {
             margin-top: 10px;
             font-family: "Bradley Hand ITC";
             font-size: 35px;
+            color:var(--clr-font);
         }
         }
 
@@ -176,8 +243,34 @@
                 });
         }
 
+        //toggle colors
+        const colorSwitch = document.getElementById("input-color-switch");
+
+        //when the input is clicked verify the state of the checkbox
+        colorSwitch.addEventListener("click", checkMode);
+
+        //1. see which state the checkbox is in
+        //2. if it is checked enable the dark mode by adding the class
+        //3. if it is not checked remove dark mode by removing the class
+        function checkMode() {
+            console.log("checking...");
+            if (colorSwitch.checked) {
+                console.log("dark on");
+                darkModeOn();
+            } else {
+                console.log("dark off");
+                darkModeOff();
+            }
+        }
+
+        function darkModeOn() {
+            document.body.classList.add("dark-mode");
+        }
+
+        function darkModeOff() {
+            document.body.classList.remove("dark-mode");
+        }
 
 
     </script>
 {% endblock %}
-
