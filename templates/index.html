@@ -5,7 +5,12 @@
     <!DOCTYPE html>
     <div style = " margin: 2% 5% 5%; text-align:left; font-family: Helvetica;">
         <div>
-            <img src="/static/assets/STUD2.png" style="height: 550px; width: 550px;" id="STUD" />
+            <img src="/static/assets/STUD2.png" style="height: 550px; width: 550px;" id="STUD" onclick="greetSTUD()"/>
+                <script>
+                    function greetSTUD() {
+                        alert("Hello! I am STUD the study owl!");
+                    }
+                </script>
             <h1 style id="StudyOwl" >StudyOwl</h1>
             <p style id="bestway">THE BEST WAY TO STUDY, IS WITH STUD</p>
             <p style id="tool">StudyOwl is a academic tool designed to help students study in a more focused and <br> efficient manner. StudyOwl offers features such as a customizable study buddy owl, <br> a StudyRoom, a To-Do list, a self timer, and many more that inspires students to study.</p>
