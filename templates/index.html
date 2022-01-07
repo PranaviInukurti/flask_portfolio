@@ -16,23 +16,29 @@
                 <p style id="checkout">Check out some of our study tools below!</p>
                 <div id="studyroomICON">
                     <a href={{ url_for('studyroom') }}>
-                        <img alt="studyroom" src="/static/assets/studyroomICON.png"
-                             width=240" height="150">
+                        <img id="studyroomIMG" alt="studyroom" src="/static/assets/studyroomICON2.png" width=240" height="150">
                     </a>
                     <p style id="studyroom">StudyRoom</p>
                 </div>
                 <div id="todoICON">
                     <a href={{ url_for('todo') }}>
-                        <img alt="todo" src="/static/assets/todoICON.png"
-                             width=240" height="150">
+                        <img id="todoIMG" alt="todo" src="/static/assets/todoICON.png" width=240" height="150">
                     </a>
                     <p style id="todo">To-Do List</p>
                 </div>
-            </div>
+                <div id="calendarICON">
+                    <img id="calendarIMG" alt="calendar" src="/static/assets/comingsoonICON.png" width=240" height="150" onclick="comingsoonALERT()">
+                    <p style id="calendar">Calendar</p>
 
+                    <script>
+                        function comingsoonALERT() {
+                            alert("This feature is not available yet.");
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
     </div>
-
 
 
 
@@ -89,15 +95,55 @@
             position: relative;
             left: 65px;
             float: left;
-            width:25%;
+            width:20%;
             height:200px;
         }
         #todoICON{
+             position: relative;
+             left: 65px;
+             float: left;
+             width:20%;
+             height:200px;
+        }
+        #calendarICON{
             position: relative;
             left: 65px;
             float: left;
-            width:25%;
+            width:20%;
             height:200px;
+        }
+        #todoIMG{
+            border-radius: 25px;
+        }
+        #studyroomIMG{
+            border-radius: 25px;
+        }
+        #calendarIMG{
+            border-radius: 25px;
+        }
+        #studyroom{
+            position: relative;
+            left: 70px;
+            font-family: 'Helvetica';
+            font-size: 20px;
+            font-weight: 300;
+            color: #4d4d4d;
+        }
+        #todo{
+            position: relative;
+            left: 75px;
+            font-family: 'Helvetica';
+            font-size: 20px;
+            font-weight: 300;
+            color: #4d4d4d;
+        }
+        #calendar{
+            position: relative;
+            left: 70px;
+            font-family: 'Helvetica';
+            font-size: 20px;
+            font-weight: 300;
+            color: #4d4d4d;
         }
     </style>
 
