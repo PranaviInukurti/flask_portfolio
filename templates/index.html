@@ -5,6 +5,12 @@
     <!DOCTYPE html>
     <div style = " margin: 2% 5% 5%; text-align:left; font-family: Helvetica;">
         <div>
+            <div id="colorswitch" class="wrapper-color-switch">
+                <input type="checkbox" id="input-color-switch">
+                <label for="input-color-switch" class="color-switch">
+                    <div class="color-switch-toggle"></div>
+                </label>
+            </div>
             <img src="/static/assets/STUD2.png" style="height: 550px; width: 550px;" id="STUD" onclick="greetSTUD()"/>
                 <script>
                     function greetSTUD() {
@@ -50,7 +56,7 @@
 
     <style>
         body{
-            background: #F5F5F5 ;
+            background: var(--clr-background) ;
         }
         #STUD{
             position: absolute;
@@ -151,5 +157,99 @@
             color: #4d4d4d;
         }
     </style>
+
+    <!--     light/dark mode styling -->
+    <style>
+        #colorswitch{
+            position: absolute;
+            left: 1300px;
+        }
+        :root {
+            --clr-background:#F5F5F5;
+            --clr-base:#BCD0C7;
+            --clr-font: #2A0C4E;
+            --clr-shadow: #2A0C4E;
+
+        }
+        .dark-mode {
+            --clr-background:#1B264F;
+            --clr-base:#576CA8;
+            --clr-font: #F5F3F5;
+            --clr-shadow: #576CA8;
+        }
+        .wrapper-color-switch {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+        .color-switch {
+            width: 4em;
+            height: 2em;
+            border-radius: 10em;
+            background: var(--clr-base);
+            border: 2px solid var(--clr-base);
+            position: absolute;
+            right: 75px;
+            cursor: pointer;
+        }
+        .color-switch-toggle {
+            width: 1.6em;
+            height: 1.6em;
+            background: var(--clr-base);
+            position: absolute;
+            border-radius: 10em;
+            top: 0.2em;
+            left: 0.2em;
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+        }
+        .color-switch::before {
+            content: "Light Mode On";
+            position: absolute;
+            display: inline-block;
+            width: 12em;
+            left: -8em;
+            top: 0.4em;
+            color: var(--clr-font);
+        }
+        #input-color-switch:checked ~ label .color-switch-toggle {
+            transform: translatex(2em);
+        }
+        #input-color-switch:checked ~ .color-switch::before {
+            content: "Dark Mode On";
+        }
+        #input-color-switch {
+            display: none;
+        }
+    </style>
+
+    <script>
+        //toggle colors
+        const colorSwitch = document.getElementById("input-color-switch");
+
+        //when the input is clicked verify the state of the checkbox
+        colorSwitch.addEventListener("click", checkMode);
+
+        //1. see which state the checkbox is in
+        //2. if it is checked enable the dark mode by adding the class
+        //3. if it is not checked remove dark mode by removing the class
+        function checkMode() {
+            console.log("checking...");
+            if (colorSwitch.checked) {
+                console.log("dark on");
+                darkModeOn();
+            } else {
+                console.log("dark off");
+                darkModeOff();
+            }
+        }
+        function darkModeOn() {
+            document.body.classList.add("dark-mode");
+        }
+        function darkModeOff() {
+            document.body.classList.remove("dark-mode");
+        }
+    </script>
 
 {% endblock %}
