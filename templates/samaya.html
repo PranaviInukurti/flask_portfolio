@@ -18,7 +18,7 @@
     <div style="margin: 2% 5% 5%; text-align:center; font-family: monospace; font-size: larger" >
         <div>
             <h1 id="header1" style="font-family: 'Blippo'; font-size: 22px; text-align: center; padding: 15px;">Hello <span id="myName">{{name}}</span>, welcome to Samaya's Individual Homepage</h1>
-            <form action="/samaya/" id="samaya" method="POST" >
+{#            <form action="/samaya/" id="samaya" method="POST" >#}
                 <label for="name" id="name1">Enter Your Name</label>
                 <input name="name" id="name">
                 <input type="submit" value="Submit" id="submit" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
@@ -35,9 +35,9 @@
                 <a id="journal" href="https://docs.google.com/document/d/1OkAMgzNODur6Gtonz_EuvoDeVXUnaMvdthtZnsBjXwU/edit?usp=sharing">TPT (Create Task Planning)</a>
             </h3>
 
-            <div class="quoteContainer">
-                <div id="quote"></div>
-                <div id="author"></div>
+                <div class="quoteContainer">
+                    <div id="quote"></div>
+                    <div id="author"></div>
                 <button id="getQuote" style="height: 35px; font-family: 'Blippo'; font-size: 15px;" onclick="Quote()">Get me a Quote!</button>
             </div>
 
@@ -178,7 +178,6 @@
         body, #quote, #author {
             display: flex;
             justify-content: center;
-
         }
 
         .quoteContainer {
@@ -188,23 +187,19 @@
             padding: 50px;
             width: 80%;
             border: 1px solid grey;
-            border-radius: 20em;
-            color:var(--clr-font);
+            border-radius: 20px;
         }
 
         #quote {
             font-family: "Bradley Hand ITC";
             text-align: center;
             font-size: 20px;
-            color:var(--clr-font);
-
         }
 
         #author {
             margin-top: 10px;
             font-family: "Bradley Hand ITC";
             font-size: 35px;
-            color:var(--clr-font);
         }
         }
 
@@ -224,11 +219,11 @@
             }
         }
         function Quote() {
-            fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
+            fetch("https://quotes15.p.rapidapi.com/quotes/random/?language_code=en", {
                 "method": "GET",
                 "headers": {
                     "x-rapidapi-host": "quotes15.p.rapidapi.com",
-                    "x-rapidapi-key": "9f4648d091mshd482eecf7cc5dcfp1c3796jsn99cec5dc67e0"
+                    "x-rapidapi-key": '9f4648d091mshd482eecf7cc5dcfp1c3796jsn99cec5dc67e0'
                 }
             })
                 .then(response => response.json())
