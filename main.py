@@ -17,6 +17,10 @@ def index():
 def samaya():
     return render_template("samaya.html")
 
+@app.route('/notepad/')
+def notepad():
+    return render_template("notepad.html")
+
 
 
 @app.route('/alice/')
