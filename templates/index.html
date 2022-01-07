@@ -9,17 +9,27 @@
             <h1 style id="StudyOwl" >StudyOwl</h1>
             <p style id="bestway">THE BEST WAY TO STUDY, IS WITH STUD</p>
             <p style id="tool">StudyOwl is a academic tool designed to help students study in a more focused and <br> efficient manner. StudyOwl offers features such as a customizable study buddy owl, <br> a StudyRoom, a To-Do list, a self timer, and many more that inspires students to study.</p>
-            <p style id="checkout">Check out some of our study tools below!</p>
-            <a href={{ url_for('studyroom') }}>
-                <img alt="studyroom" src="/static/assets/studyroomICON.png"
-                     width=240" height="150">
-            </a>
-            <p style id="studyroom">StudyRoom</p>
-            <a href={{ url_for('todo') }}>
-                <img alt="todo" src="/static/assets/todoICON.png"
-                     width=240" height="150">
-            </a>
-            <p style id="todo">To-Do List</p>
+            <br>
+            <br>
+            <br>
+            <div id = toolICON>
+                <p style id="checkout">Check out some of our study tools below!</p>
+                <div id="studyroomICON">
+                    <a href={{ url_for('studyroom') }}>
+                        <img alt="studyroom" src="/static/assets/studyroomICON.png"
+                             width=240" height="150">
+                    </a>
+                    <p style id="studyroom">StudyRoom</p>
+                </div>
+                <div id="todoICON">
+                    <a href={{ url_for('todo') }}>
+                        <img alt="todo" src="/static/assets/todoICON.png"
+                             width=240" height="150">
+                    </a>
+                    <p style id="todo">To-Do List</p>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -37,46 +47,57 @@
         }
         #StudyOwl{
             position: relative;
-            left: 100px;
+            left: 150px;
             font-family: 'Helvetica';
-            font-size: 70px;
-            font-weight: 800;
+            font-size: 90px;
+            font-weight: 900;
             text-align: left;
-            padding: 15px;
+            padding: 30px;
             color: #374db9;
         }
         #bestway{
             position: relative;
-            left: 70px;
-            down: 200px;
+            left: 100px;
             font-family: 'Helvetica';
             font-size: 30px;
             font-weight: 800;
             text-align: left;
-            padding: 15px;
+            padding: 0px;
             color: #DDA658;
         }
         #tool{
             position: relative;
             left: 60px;
-            down: 380px;
             font-family: 'Helvetica';
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 300;
             text-align: left;
-            padding: 15px;
-            color: #4e5fb4;
+            padding: 0px;
+            color: #4d4d4d;
         }
         #checkout{
             position: relative;
-            left: 60px;
-            down: 450px;
+            left: 50px;
             font-family: 'Helvetica';
             font-size: 25px;
             font-weight: 700;
             text-align: left;
             padding: 15px;
             color: #697ace;
+        }
+        #studyroomICON{
+            position: relative;
+            left: 65px;
+            float: left;
+            width:25%;
+            height:200px;
+        }
+        #todoICON{
+            position: relative;
+            left: 65px;
+            float: left;
+            width:25%;
+            height:200px;
         }
     </style>
 
