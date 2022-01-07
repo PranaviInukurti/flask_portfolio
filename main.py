@@ -17,6 +17,10 @@ def index():
 def samaya():
     return render_template("samaya.html")
 
+@app.route('/notepad/')
+def notepad():
+    return render_template("notepad.html")
+
 
 
 @app.route('/alice/')
@@ -61,6 +65,10 @@ def todo():
 @app.route('/studyroom/')
 def studyroom():
     return render_template("studyroom.html")
+
+@app.route('/notepad/')
+def notepad():
+    return render_template("notepad.html")
 
 
 @app.route('/crudtable/')
