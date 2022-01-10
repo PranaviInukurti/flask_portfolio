@@ -10,21 +10,9 @@
     <script src="/static/js/linda.js"></script>
     <body>
     <style>
-        .button1 {
-            background-color: white;
-            color: grey;
-            border: 3px solid #9CD8EC;
-            text-decoration: none;
-            margin: 4px 2px;
-            padding: 3px 4px;
-        }
 
-        .button1:hover {
-            background-color: whitesmoke;
-            color: black;
-        }
         .navbar{
-            z-index: 900;
+            z-index: 100;
             width: 100%;
             margin-bottom: 20px;
         }
@@ -71,7 +59,7 @@
 
 
                     <!-Random Motivational Quote Api->
-                    <div style="display:flex"> <button id="get-quote" style="margin-top: 20px; margin-right: 10px; height: 35px;" onclick="newQuote()"><img src="/static/assets/STUD.png" alt="Stud" width="60px" height="60px" style="margin-top: -10px; background-color: transparent"></button> <button id="on-off" style="color: black; margin-top: 20px;height: 35px;" onclick="onOff()"><img src="https://cdn0.iconfinder.com/data/icons/controls-and-navigation-arrows-3/24/146-512.png" alt="X Sign" width="15" height="15"></button> </div>
+                    <div> <button id="get-quote" style="margin-top: 20px; margin-right: 10px; height: 35px;" onclick="newQuote()"><img src="/static/assets/STUD.png" alt="Stud" width="100" height="100" style="margin-top: -10px; background-color: transparent; background-repeat: no-repeat; border: none; cursor: pointer; overflow: hidden; alignment: center"></button> <button id="on-off" style="color: black; margin-top: 20px;height: 35px;" onclick="onOff()"><img src="https://cdn0.iconfinder.com/data/icons/controls-and-navigation-arrows-3/24/146-512.png" alt="X Sign" width="15" height="15"></button> </div>
                     <div id="display-quote" style="margin-top: 10px; margin-right: 200px; font-size: 20px;color: white;font-weight: 600; text-align: left">No quote yet</div>
 
                     <br>
