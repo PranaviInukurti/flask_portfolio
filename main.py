@@ -12,6 +12,9 @@ app.register_blueprint(app_crud)
 def index():
     return render_template("index.html")
 
+@app.route('/flashcards/')
+def flashcards():
+    return render_template("flashcards.html")
 
 @app.route('/samaya/')
 def samaya():
@@ -20,7 +23,6 @@ def samaya():
 @app.route('/notepad/')
 def notepad():
     return render_template("notepad.html")
-
 
 
 @app.route('/alice/')
