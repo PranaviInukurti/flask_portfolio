@@ -17,11 +17,6 @@ def index():
 def samaya():
     return render_template("samaya.html")
 
-@app.route('/notepad/')
-def notepad():
-    return render_template("notepad.html")
-
-
 
 @app.route('/alice/')
 def alice():
@@ -56,7 +51,6 @@ def saathvika():
 def linda():
     return render_template("linda.html")
 
-
 @app.route('/todo/')
 def todo():
     return render_template("todo.html")
@@ -69,7 +63,6 @@ def studyroom():
 @app.route('/notepad/')
 def notepad():
     return render_template("notepad.html")
-
 
 @app.route('/crudtable/')
 def crudtable():
