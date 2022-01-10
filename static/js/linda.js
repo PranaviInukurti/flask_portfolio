@@ -10,6 +10,42 @@ function changeImage() {
     }
 }
 
+
+function lightMode() {
+    //light mode
+    if(document.getElementById("subject").style.color === "rgb(255, 255, 255)"){
+        document.getElementById("subject").style.color = "#333333"
+        document.getElementById("subject").style.backgroundColor = "rgba(255, 255, 255,0.5)"
+        document.getElementById("subject").style.textShadow = "5px 5px #ffffff"
+        document.getElementById("welcome-words").style.color = "#333333"
+        document.getElementById("welcome-words").style.backgroundColor = "rgba(255, 255, 255,0.5)"
+        document.getElementById("enter-name").style.color = "#333333"
+        document.getElementById("display-quote").style.color = "#333333"
+        document.getElementById("display-quote").style.backgroundColor = "rgba(255, 255, 255,0.5)"
+        document.getElementById("translation").style.color = "#333333"
+        document.getElementById("translation").style.backgroundColor = "rgba(255, 255, 255,0.5)"
+        document.getElementById("image").style.backgroundColor = "rgba(255, 255, 255,0.5)"
+        document.getElementById("click-me").style.backgroundColor = "rgba(255, 255, 255,0.5)"
+        document.getElementById("click-me").style.color = "#333333"
+    }
+    //dark mode
+    else{
+        document.getElementById("subject").style.color = "#ffffff"
+        document.getElementById("subject").style.backgroundColor = "rgba(112, 112, 112, 0.51)"
+        document.getElementById("subject").style.textShadow = "5px 5px #333333"
+        document.getElementById("welcome-words").style.color = "#ffffff"
+        document.getElementById("welcome-words").style.backgroundColor = "rgba(112, 112, 112, 0.51)"
+        document.getElementById("enter-name").style.color = "#ffffff"
+        document.getElementById("display-quote").style.color = "#ffffff"
+        document.getElementById("display-quote").style.backgroundColor = "rgba(112, 112, 112, 0.51)"
+        document.getElementById("translation").style.color = "#ffffff"
+        document.getElementById("translation").style.backgroundColor = "rgba(112, 112, 112, 0.51)"
+        document.getElementById("image").style.backgroundColor = "rgba(112, 112, 112, 0.51)"
+        document.getElementById("click-me").style.backgroundColor = "rgba(112, 112, 112, 0.51)"
+        document.getElementById("click-me").style.color = "#ffffff"
+    }
+}
+
 //Translation Api
 function translateIt() {
     console.log(document.getElementById("english").value)
@@ -181,6 +217,7 @@ var taskCompleted = function() {
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 }
+
 
 //Mark a task as incomplete
 var taskIncomplete = function() {
