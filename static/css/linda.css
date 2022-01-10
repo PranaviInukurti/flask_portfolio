@@ -43,9 +43,62 @@ h1 {
     font-size: 50px;
     background-color: rgba(112, 112, 112, 0.51);
 }
-.navbar {
-    z-index: 900 !important;
+
+.dropbtn {
+    background-color: #374db9;
+    color: ghostwhite;
+    padding: 7px;
+    font-size: 21px;
+    border: 90px;
+    cursor: pointer;
 }
+
+.nav-link {
+    background-color: #374db9;
+    color: ghostwhite;
+    padding: 7px;
+    font-size: 21px;
+    border: 90px;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #8c99d5;
+    color: #232323;
+}
+
+.nav-link:hover, .nav-link:focus {
+    background-color: #8c99d5;
+    color: black;
+}
+
+.dropdown {
+    position: center;
+    display: inline-block;
+    color: ghostwhite;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: ghostwhite;
+    color: ghostwhite;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: ghostwhite;
+    padding: 7px 9px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #b6c0ef;}
+
+.show {display: block;}
 
 
 /* Todo List Basic Style */
@@ -54,7 +107,6 @@ body {
     background: #fff;
     color: #333;
     font-family: Lato, sans-serif;
-    background-color: #e4e4e4;
 }
 
 .container {
