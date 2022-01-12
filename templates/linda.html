@@ -3,6 +3,9 @@
     <!DOCTYPE html>
 
     <link rel="stylesheet" type="text/css" href="/static/css/linda.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/static/js/linda.js"></script>
     <body>
@@ -34,19 +37,18 @@
 
 
     <div id="wrapper">
-
+        <audio loop controls autoplay>
+            <source src="/static/rain.mp3" type="audio/mpeg">
+        </audio>
     <div style="margin: 2% 5% 5%; text-align:center; font-family: Baskerville; font-size: larger">
         <div>
-            <button id="light-mode" onclick="lightMode()">Light Mode</button>
-            <h1 id="subject" style="color: #ffffff;font-size:75px">Linda Liu</h1>
-            <audio loop controls autoplay>
-                <source src="/static/lofi.mp3" type="audio/mpeg">
-            </audio>
+
+            <h1 style="font-size:75px">Linda Liu</h1>
 
             <!-Greet->
-            <p id="welcome-words">Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
+            <p>Hello <span id="myName">{{name}}</span>, welcome to my individual page!</p>
             <form action="#" id="linda" method="POST" >
-                <label id="enter-name" for="name" style="color: #ffffff">Enter Your Name</label>
+                <label for="name" style="color: white">Enter Your Name</label>
                 <input name="name" id="name">
                 <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
             </form>
@@ -64,21 +66,21 @@
 
 
             <!-Images Toggle->
-            <p id="image">
+            <p>
                 <img src="/static/assets/lindaWithMask.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()"/>
             </p>
-            <p id="click-me" style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
+            <p style="font-size: large; font-family: Baskerville; text-align: center"><i>Click Me</i></p>
 
 
             <!-Random Motivational Quote Api->
-            <button id="get-quote" style="margin-top: 20px;height: 35px;" onclick="newQuote()">Get me a quote</button>
+            <button id="get-quote" style="margin-top: 20px;height: 35px" onclick="newQuote()">Get me a quote</button>
 
-            <div id="display-quote" style="margin-top: 10px;font-size: 29px;color: #ffffff;font-weight: 600;background-color: rgba(112, 112, 112, 0.51)">No quote yet</div>
+            <div id="display-quote" style="margin-top: 10px;font-size: 29px;color: white;font-weight: 600;">No quote yet</div>
 
             <br>
 
             <!- Translation Api ->
-            <p id="translation">Translation Api (from English to Spanish; don't use over 300 times in a month)</p>
+            <p>Translation Api (from English to Spanish; don't use over 300 times in a month)</p>
             <input type="text" id="english"> <button style=" margin-top: 20px; height: 35px; width: 130px; background: white; color: black;" id="translate" onclick="translateIt()">Translate</button>
             <div style="color: white"id="spanish"></div>
 
@@ -122,7 +124,8 @@
         </div>
         </div>
     </div>
-
+    </div>
+    </div>
     </body>
 
 
