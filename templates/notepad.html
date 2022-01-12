@@ -2,20 +2,127 @@
 {% block body %}
     <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Architects+Daughter">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     </head>
 
     <body>
         <div class="maincontainer">
             <div class="container1">
-                <button class="btn btn-light" onlick="typeNote()">Create Note</button>
+                <button class="btn btn-light" id="addpage" onlick="typeNote()">Add Page</button>
             </div>
             <div class="container2"></div>
-            <div class="container3"></div>
+            <div class="container3">
+                <form>
+                    <textarea id="notetext" placeholder="write note..." maxlength="96"></textarea>
+                    <svg id="checkicon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.235.235 0 0 1 .02-.022z"/>
+                    </svg>
+                    <svg id="xicon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </form>
+            </div>
         </div>
     </body>
 
+    <script>
+        var container2 = document.getElementByClassName("container2")[0];
+        var container3 = document.getElementByClassName("container3")[0];
+        var checkicon = document.getElementById("checkicon");
+        var xicon = document.getElementById("xicon");
+        var i = 0;
+
+        xicon.addEventListener("click", function(){
+            typeNote();
+        })
+        checkicon.addEventListener("click", function(){
+            createNote();
+        })
+
+        function typeNote(){
+            if(container3.style.display == "none"){
+                container3.style.display = "block"
+            };
+        }
+        function createNote(){
+
+        }
+        function margin(){
+            var random_margin = ["-5px","1px","5px", "10px", "15px", "20px"]
+            return random_margin[Math.floor(Math.random())*random_margin.length)];
+        }
+        function rotate(){
+            var random_rotate = ["rotate(3deg)", "rotate(31deg)", "rotate(-1deg)", "rotate(-3deg)", "rotate(-5deg)", "rotate(-7deg)", ];
+            return random_rotate[Math.floor(Math.random())*random_rotate.length)];
+        }
+        function color(){
+            var random_color = ["#e9ebf3", "#ffffff", "#c0c8ec", "#a8b5f3", "#e9ebf3", "#BDBDE1FF"]
+            if (i> random_color.length - 1)
+                i = 0;
+            return random_rotate[i++];
+        }
+    </script>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: #c68c53a8;
+            font-family: 'Helvetica';
+            font-size: 19px;
+        }
+        .maincontainer{
+            width: 95%;
+            margin: auto;
+        }
+        .container1{
+            margin-top: 20px;
+            margin-left: 5%;
+        }
+        #addpage{
+            color: #374db9
+        }
+        .container2{
+            display: flex;
+            justify-content: flex-start;
+            flex-warp: warp;
+            margin-top: 20px;
+            margin-left: 5%;
+        }
+        .container3{
+            display:
+            position: absolute;
+            top: 26%
+            left: 40%
+        }
+        textarea{
+            box-shadow: 10px 10px 10px 0px rgba(75, 75, 75, 0.75);
+            outline: none;
+            border:none;
+            width: 275px;
+            height: 275px;
+            padding: 40px 25px 25px 25px;
+        }
+        svg{
+            color: #374db9;
+        }
+        #checkicon{
+            position: absolute;
+            right: 17%;
+            top: 4%;
+        }
+        #xicon{
+            position: absolute;
+            right: 5%;
+            top: 4%;
+        }
+    </style>
 {% endblock %}
 
 
