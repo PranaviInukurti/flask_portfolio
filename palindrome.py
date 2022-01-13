@@ -55,15 +55,9 @@ class Palindrome:
 
     # Tester Code
 if __name__ == "__main__":
-    '''Value for testing'''
-    n = 20
-    '''Constructor of Class object'''
-    fibonacci = Fibonacci(n)
 
-    '''Using getters to obtain data from object'''
-    print(f"Fibonacci number for {n} = {fibonacci.number}")
-    print(f"Fibonacci series for {n} = {fibonacci.list}")
+    ls = [Palindrome("civic"), Palindrome("happy"), Palindrome("never odd or even!")]
 
-    '''Using method to get data from object'''
-    for i in range(n):
-        print(f"Fibonacci sequence {i + 1} = {fibonacci.get_sequence(i)}")
+    for l in ls:
+        print(l.candidate, l.isPalindrome, l.tests, l.analysis)
+
