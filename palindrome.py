@@ -56,8 +56,10 @@ class Palindrome:
     # Tester Code
 if __name__ == "__main__":
 
-    ls = [Palindrome("civic"), Palindrome("happy"), Palindrome("never odd or even!")]
+    word1 = input("Enter a word: ")
+    word2 = input("Enter a second word: ")
+    word3 = input("Enter a third word: ")
+    ls = [Palindrome(word1), Palindrome(word2), Palindrome(word3)]
 
     for l in ls:
         print(l.candidate, l.isPalindrome, l.tests, l.analysis)
-
