@@ -61,9 +61,9 @@ def studyroom():
     return render_template("studyroom.html")
 
 
-# @app.route('/notepad/')
-# def notepad():
-#     return render_template("notepad.html")
+@app.route('/notepad/')
+def notepad():
+    return render_template("notepad.html")
 
 @app.route('/crudtable/')
 def crudtable():
