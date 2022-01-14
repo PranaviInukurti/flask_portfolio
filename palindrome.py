@@ -55,7 +55,6 @@ class Palindrome:
 
     # Tester Code
 if __name__ == "__main__":
-
     word1 = input("Enter a word: ")
     word2 = input("Enter a second word: ")
     word3 = input("Enter a third word: ")
