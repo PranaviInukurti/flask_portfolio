@@ -7,7 +7,6 @@ from crud.model import Users
 
 app.register_blueprint(app_crud)
 
-
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -59,6 +58,10 @@ def todo():
 @app.route('/studyroom/')
 def studyroom():
     return render_template("studyroom.html")
+
+@app.route('/calculator/')
+def calculator():
+    return render_template("calculator.html")
 
 
 # @app.route('/notepad/')

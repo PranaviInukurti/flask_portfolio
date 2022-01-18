@@ -1,5 +1,7 @@
 import re
 
+import self as self
+
 
 class Palindrome:
     # palindrome initializer method
@@ -53,17 +55,18 @@ class Palindrome:
     def analysis(self):
         return self._analysis
 
-    # Tester Code
+
+        # Tester Code
 if __name__ == "__main__":
     '''Value for testing'''
-    n = 20
+    c = "racecar"
+    c = "sister"
     '''Constructor of Class object'''
-    fibonacci = Fibonacci(n)
+    palindrome = Palindrome(c)
 
     '''Using getters to obtain data from object'''
-    print(f"Fibonacci number for {n} = {fibonacci.number}")
-    print(f"Fibonacci series for {n} = {fibonacci.list}")
+    print(f"Palindrome number for {c} = {self.is_palindrome()}")
 
     '''Using method to get data from object'''
-    for i in range(n):
-        print(f"Fibonacci sequence {i + 1} = {fibonacci.get_sequence(i)}")
+    for i in range(c):
+        print(f"Palindrome sequence {i + 1} = {palindrome.get_sequence(i)}")
