@@ -17,6 +17,10 @@ def index():
 def samaya():
     return render_template("samaya.html")
 
+@app.route('/flashcards/')
+def flashcards():
+    return render_template("flashcards.html")
+
 
 @app.route('/alice/')
 def alice():
