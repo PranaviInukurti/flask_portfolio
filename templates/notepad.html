@@ -9,7 +9,7 @@
     <body>
         <div class="maincontainer">
             <div class="container1">
-                <button class="btn btn-light" id="addpage" onlick="typeNote()">Add Page</button>
+                <button class="btn btn-light" id="addpage" onclick="typeNote()">Add Page</button>
             </div>
             <div class="container2"></div>
             <div class="container3">
@@ -29,8 +29,8 @@
     </body>
 
     <script>
-        var container2 = document.getElementByClassName("container2")[0];
-        var container3 = document.getElementByClassName("container3")[0];
+        var container2 = document.getElementsByClassName("container2")[0];
+        var container3 = document.getElementsByClassName("container3")[0];
         var checkicon = document.getElementById("checkicon");
         var xicon = document.getElementById("xicon");
         var i = 0;
@@ -44,14 +44,30 @@
 
         function typeNote(){
             if(container3.style.display == "none"){
-                container3.style.display = "block"
-            };
+                container3.style.display = "block";
+            }
+            else{
+                container3.style.display = "none";
+            }
         }
-        function createNote(){
 
+        function createNote(){
+            var noteText = document.getElementById("note-text").value;
+            var node0 = document.createElement("div");
+            var node1 = document.createElement("h1");
+
+            node1.innerHTML = noteText;
+            node1.setAttribute("style", "width:250px ; height:250px ; font-size:26px ; padding:25px ; margin-top:10px ; overflow:hidden ; box-shadow: 10px 10px 10px 0px rgba(75, 75, 75, 0.75) ");
+            node1.style.margin = margin();
+            node1.style.transform = rotate();
+            node1.style.background = color();
+            node0.appendChild(node1);
+
+            container2.insertAdjacentElement("beforeend",node0);
         }
+
         function margin(){
-            var random_margin = ["-5px","1px","5px", "10px", "15px", "20px"]
+            var random_margin = ["-5px","1px","5px", "10px", "15px", "20px"];
             return random_margin[Math.floor(Math.random())*random_margin.length)];
         }
         function rotate(){
@@ -59,10 +75,10 @@
             return random_rotate[Math.floor(Math.random())*random_rotate.length)];
         }
         function color(){
-            var random_color = ["#e9ebf3", "#ffffff", "#c0c8ec", "#a8b5f3", "#e9ebf3", "#BDBDE1FF"]
+            var random_color = ["#e9ebf3", "#ffffff", "#c0c8ec", "#a8b5f3", "#e9ebf3", "#BDBDE1FF"];
             if (i> random_color.length - 1)
                 i = 0;
-            return random_rotate[i++];
+            return random_color[i++];
         }
     </script>
 
@@ -98,8 +114,8 @@
         .container3{
             display:
             position: absolute;
-            top: 26%
-            left: 40%
+            top: 26%;
+            left: 40%;
         }
         textarea{
             box-shadow: 10px 10px 10px 0px rgba(75, 75, 75, 0.75);
@@ -109,8 +125,7 @@
             height: 275px;
             padding: 40px 25px 25px 25px;
         }
-        svg{
-            color: #374db9;
+
         }
         #checkicon{
             position: absolute;

@@ -1,7 +1,5 @@
 import re
 
-import self as self
-
 
 class Palindrome:
     # palindrome initializer method
@@ -55,18 +53,12 @@ class Palindrome:
     def analysis(self):
         return self._analysis
 
-
-        # Tester Code
+    # Tester Code
 if __name__ == "__main__":
-    '''Value for testing'''
-    c = "racecar"
-    c = "sister"
-    '''Constructor of Class object'''
-    palindrome = Palindrome(c)
+    word1 = input("Enter a word: ")
+    word2 = input("Enter a second word: ")
+    word3 = input("Enter a third word: ")
+    ls = [Palindrome(word1), Palindrome(word2), Palindrome(word3)]
 
-    '''Using getters to obtain data from object'''
-    print(f"Palindrome number for {c} = {self.is_palindrome()}")
-
-    '''Using method to get data from object'''
-    for i in range(c):
-        print(f"Palindrome sequence {i + 1} = {palindrome.get_sequence(i)}")
+    for l in ls:
+        print(l.candidate, l.isPalindrome, l.tests, l.analysis)
