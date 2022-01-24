@@ -246,7 +246,7 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 }
 
 // var ajaxRequest = function() {
-// 	console.log("AJAX request");
+//     console.log("AJAX request");
 // }
 
 //Set the click handler to the addTask function
@@ -263,6 +263,33 @@ for (var i = 0; i < incompleteTasksHolder.children.length; i++) {
 for (var i = 0; i < completedTasksHolder.children.length; i++) {
     //bind events to list item's children (taskIncomplete)
     bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
+}
+
+
+//Change Backgrounds
+function changeBackground() {
+    console.log("hi")
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground1 (2).jpg")'
+}
+
+function changeBackground2() {
+    console.log("hi")
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground4.jpg")'
+}
+
+function changeBackground3() {
+    console.log("hi")
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground5.jpg")'
+}
+
+function changeBackground4() {
+    console.log("hi")
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground3 (2).jpg")'
+}
+
+function changeBackground5() {
+    console.log("hi")
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground6.jpg")'
 }
 
 

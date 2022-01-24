@@ -5,6 +5,7 @@ body {
     padding: 0px;
     font-family: helvetica;
 }
+}
 #video_wrapper {
     margin: 0px;
     padding: 0px;
@@ -20,6 +21,7 @@ body {
     height: auto;
     transform: translate(-50%, -50%);
 }
+
 #wrapper {
     position: relative;
     text-align: left;
@@ -298,6 +300,8 @@ ul li.editMode label {
 
 .show {display: block;}
 
+
+
 /* navbar */
 .navbar-nav{
     width: 300px;
@@ -313,4 +317,45 @@ ul li.editMode label {
     font-size: 20px;
     font-family: monospace;
     margin-top: -1px;
+}
+
+#background-button1{
+    background-color: white;
+    color: black;
+    width: 120px;
+    height: 30px;
+    margin-left: -200px;
+}
+
+#background-button2{
+    background-color: white;
+    color: black;
+    width: 120px;
+    height: 30px;
+    margin-left: -200px;
+    margin-top:
+}
+
+#background-button3{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
+}
+
+#background-button4{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
+}
+
+#background-button5{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
+}
+
+#mysteriousBackground{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
 }
