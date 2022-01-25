@@ -269,27 +269,27 @@ for (var i = 0; i < completedTasksHolder.children.length; i++) {
 //Change Backgrounds
 function changeBackground() {
     console.log("hi")
-    document.body.style.backgroundImage = 'url("/static/assets/studyBackground1 (2).jpg")'
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground2.gif")'
 }
 
 function changeBackground2() {
     console.log("hi")
-    document.body.style.backgroundImage = 'url("/static/assets/studyBackground4.jpg")'
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground4 (1).gif")'
 }
 
 function changeBackground3() {
     console.log("hi")
-    document.body.style.backgroundImage = 'url("/static/assets/studyBackground5.jpg")'
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground3.gif")'
 }
 
 function changeBackground4() {
     console.log("hi")
-    document.body.style.backgroundImage = 'url("/static/assets/studyBackground3 (2).jpg")'
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground1.gif")'
 }
 
 function changeBackground5() {
     console.log("hi")
-    document.body.style.backgroundImage = 'url("/static/assets/studyBackground6.jpg")'
+    document.body.style.backgroundImage = 'url("/static/assets/studyBackground6 (1).jpg")'
 }
 
 

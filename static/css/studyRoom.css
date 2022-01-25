@@ -37,10 +37,12 @@ p {
 
 h1 {
     font-family: "Blippo";
-    text-align: left;
+    text-align: center;
     padding: 15px;
     color: white;
     font-size: 50px;
+    width: 40%;
+    background-color: black;
 }
 
 
@@ -319,21 +321,17 @@ ul li.editMode label {
     margin-top: -1px;
 }
 
+/* Background Buttons*/
 #background-button1{
     background-color: white;
-    color: black;
     width: 120px;
-    height: 30px;
-    margin-left: -200px;
+    margin-left: -200px
 }
 
 #background-button2{
     background-color: white;
-    color: black;
     width: 120px;
-    height: 30px;
-    margin-left: -200px;
-    margin-top:
+    margin-left: -200px
 }
 
 #background-button3{
@@ -349,12 +347,6 @@ ul li.editMode label {
 }
 
 #background-button5{
-    background-color: white;
-    width: 120px;
-    margin-left: -200px
-}
-
-#mysteriousBackground{
     background-color: white;
     width: 120px;
     margin-left: -200px
