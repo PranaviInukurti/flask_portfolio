@@ -1,9 +1,14 @@
 # import "packages" from flask
 from flask import Flask, render_template, request, url_for, redirect, jsonify, make_response
 import requests
+
+import linda
 from __init__ import app
 from crud.app_crud import app_crud, users_ilike, user_by_id, users_all
 from crud.model import Users
+
+
+
 
 app.register_blueprint(app_crud)
 
@@ -16,9 +21,15 @@ def index():
 def samaya():
     return render_template("samaya.html")
 
+
 @app.route('/flashcards/')
 def flashcards():
     return render_template("flashcards.html")
+
+
+@app.route('/websearch/')
+def websearch():
+    return render_template("websearch.html")
 
 
 @app.route('/alice/')
@@ -49,10 +60,10 @@ def pranavi():
 def saathvika():
     return render_template("saathvika.html")
 
-
 @app.route('/linda/')
 def linda():
     return render_template("linda.html")
+
 
 @app.route('/todo/')
 def todo():
