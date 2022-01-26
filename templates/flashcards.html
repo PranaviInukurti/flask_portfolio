@@ -10,11 +10,11 @@
 {#back of flashcard#}
 </div><br>
 <div id ="activeCardButtons">
-    <button id="prev" onclick="prevCard()">Previous Card
+    <button id="prev" onclick="prevCard()">
     </button>
     <button id="flip" type="button" value="Flip" onclick="flash()">
         Flip</button>
-    <button id="next" onclick="nextCard()">Next Card
+    <button id="next" onclick="nextCard()">
     </button>
 </div>
 <br>
@@ -79,34 +79,51 @@
 
     }
     #prev {
-        margin-left: 0px;
-        padding: 2px;
+        position:absolute;
+        left:4%;
+        border-top: 25px solid transparent;
+        border-right: 50px solid darkblue;
+        border-bottom: 25px solid transparent;
     }
+
     #flip {
         position:absolute;
         width: 50px;
-        left:50%;
-        margin-left:-25px;
+        left:48%;
+        display:block;
+        height: 30px;
+        border-radius: 25px;
+
 
 
     }
     #next {
-        float:right;
-        margin-right:15px;
+        position:absolute;
+        right: 4%;
+        width: 0;
+        height: 0;
+        border-top: 25px solid transparent;
+        border-left: 50px solid darkblue;
+        border-bottom: 25px solid transparent;
     }
     #submit {
         position:relative;
+        top: -20px;
+        right: -80px;
         width:180px;
-        margin-left:;
         margin-top:10px;
         margin-bottom:10px;
         display:block;
+        height: 30px;
+        border-radius: 25px;
+
     }
     #cardForm {
         position:absolute;
         width: 100%;
         margin-left:50%;
         margin-top:10px;
+
     }
     #front, #back{
         display:block;
@@ -115,9 +132,13 @@
 
     #clearDeck{
         position:relative;
+        top: 100px;
+        height: 30px;
         width:360px;
         margin-left:-90px;
         display: block;
+        border-radius: 25px;
+
     }
     #clearDeck:hover{
         color:red;
@@ -132,15 +153,25 @@
     }
     #newTerm{
         position:relative;
+        top: 70px;
+        right: 110px;
         width:180px;
         margin-top:10px;
         display:block;
+        display:block;
+        height: 30px;
+        border-radius: 25px;
 
     }
     #newDef{
         position:relative;
+        right: 110px;
+        top: 68px;
         width:180px;
         margin-top:10px;
+        display:block;
+        height: 30px;
+        border-radius: 25px;
 
     }
     hr {
