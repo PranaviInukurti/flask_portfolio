@@ -8,7 +8,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/static/js/linda.js"></script>
-    <body>
+    <body id="bodyStudyroom" style="background-image: url(/static/assets/studyBackground2.gif); background-size:cover;">
     <style>
 
         .navbar{
@@ -18,11 +18,6 @@
         }
 
     </style>
-
-    <div id="video_wrapper">
-        <video autoplay muted loop>
-            <source src="https://drive.google.com/uc?export=view&id=1yWXLFO320yVEiGrRJxm_hkEojwD2AVgr" type="video/mp4">
-        </video>
 
 
         <div id="wrapper">
@@ -52,21 +47,18 @@
                 <script src="/static/js/clock.js"></script>
             </div>
             </div>
-            <div style="margin-top: -100px;text-align:left; font-family: Baskerville; font-size: larger">
+
+            <div style="margin-top: -100px;text-align:left; font-family: Baskerville; font-size: larger;">
+
                 <div>
 
-                    <h1 style="font-family: 'cursive'; color: coral; text-shadow: 4px 4px #232C33; size: 65px">Study Room</h1>
+                    <h1 style="text-shadow: 4px 4px #232C33;background-color: rgba(105,105,105,0.5); text-align: center; width: 40%;">Study Room</h1>
 
-
-                    <!-Random Motivational Quote Api->
-                    <div> <button id="get-quote" style="margin-top: 20px; margin-right: 10px; height: 35px;" onclick="newQuote()"><img src="/static/assets/STUD.png" alt="Stud" width="70" height="70" style="margin-top: -10px; background-repeat: no-repeat; border: none; cursor: pointer; overflow: hidden; alignment: center"></button> <button id="on-off" style="color: black; margin-top: 20px;height: 35px;" onclick="onOff()"><img src="https://cdn0.iconfinder.com/data/icons/controls-and-navigation-arrows-3/24/146-512.png" alt="X Sign" width="15" height="15"></button> </div>
-                    <div id="display-quote" style="margin-top: 10px; margin-right: 200px; font-size: 20px;color: white;font-weight: 600; text-align: left">No quote yet</div>
-
-                    <br>
 
 
                     <!-Todo List->
-                    <div style="display: flex"> <button id="show-todo" onclick="showTodo()"><img src="https://th.bing.com/th/id/OIP.VjQF4ZjCQrpTZxMCo-PdFgHaHa?w=218&h=218&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Plus Sign" width="15" height="15"></button> <div style="margin-top: 28px; margin-left:5px;font-family: cursive"> Todo List </div> </div>
+                   <div style="margin-left:-200px">
+                    <div style="display: flex"> <button style="width:60px" id="show-todo" onclick="showTodo()"><img src="https://th.bing.com/th/id/OIP.VjQF4ZjCQrpTZxMCo-PdFgHaHa?w=218&h=218&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Plus Sign" width="15" height="15"></button> <div style="color: white;margin-top: 28px; margin-left:5px;font-family: cursive; background-color: rgba(112, 112, 112, 0.51)"> Todo List </div> </div>
                     <div style="margin-left:-5px"; class="container" id="todo-list">
 
                         <h3>Add Item</h3>
@@ -85,9 +77,24 @@
                             <li><input type="checkbox" checked><label>Essay Final Draft</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
                         </ul>
                     </div>
-
+                </div>
 
                     <br>
+
+                    <!- Change Backgrounds _>
+                    <div> <button id="background-button1" onclick="changeBackground()"> <img src="/static/assets/studyBackground2.gif" alt="studyBackground1" width="120px" height="82px"> </button> </div>
+                    <div> <button id="background-button2" onclick="changeBackground2()"> <img src="/static/assets/studyBackground4 (1).gif" alt="studyBackground2" width="120px" height="82px"> </button> </div>
+                    <div> <button id="background-button3" onclick="changeBackground3()"> <img src="/static/assets/studyBackground3.gif" alt="studyBackground3" width="120px" height="82px"> </button> </div>
+                    <div> <button id="background-button4" onclick="changeBackground4()"> <img src="/static/assets/studyBackground1.gif" alt="studyBackground4" width="120px" height="82px"> </button> </div>
+                    <div> <button id="background-button5" onclick="changeBackground5()"> <img src="/static/assets/studyBackground6 (1).jpg" alt="studyBackground5" width="120px" height="82px"> </button> </div>
+
+
+                    <!-Random Motivational Quote Api->
+                    <div style="margin-top:350px;margin-left:-200px">
+                        <div style="display:flex"> <button id="get-quote" style="margin-top: 20px; margin-right: 10px; height: 35px;width:60px" onclick="newQuote()"><img src="/static/assets/STUD.png" alt="Stud" width="70px" height="70px" style="margin-top: -10px;"></button> <button id="on-off" style="color: black; margin-top: 20px;height: 35px;" onclick="onOff()"><img src="https://cdn0.iconfinder.com/data/icons/controls-and-navigation-arrows-3/24/146-512.png" alt="X Sign" width="15" height="15"></button> </div>
+                        <div id="display-quote" style="margin-top: 10px; margin-right: 200px; font-size: 20px;color: white;font-weight: 600; text-align: left; background-color: rgba(112, 112, 112, 0.51)">No quote yet</div>
+                    </div>
+
 
 
                 </div>

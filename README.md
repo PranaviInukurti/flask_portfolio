@@ -17,12 +17,35 @@
 
 ---
 ## Table of Contents
-1. [Week 4 - "Time to be Resolute"](#Week4)
-2. [Week 3 - WIP Project Review](#Week3)
-3. [Week 2 - Home Pages](#Week2)
-4. [Week 1 - Project Approval](#Week1)
-5. [Week 0 - Introduction](#Week0)
+1. [Week 5 & 7 - "PBL showing the How, Theme, Technicals"](#Week5&7)
+2. [Week 4 - "Time to be Resolute"](#Week4)
+3. [Week 3 - WIP Project Review](#Week3)
+4. [Week 2 - Home Pages](#Week2)
+5. [Week 1 - Project Approval](#Week1)
+6. [Week 0 - Introduction](#Week0)
 ---
+
+###   <h2 id="Week5&7">Week 5 & 7 - PBL showing the How, Theme, Technicals: Due 1/31</h2>
+- <a href="https://github.com/samayass/flask_portfolio/projects/1?card_filter_query=milestone%3A%22week+4+-+%5C%22time+to+be+resolute%5C%22%22">Scrum Board</a>
+
+| Name | Requirement | Evidence | Grade |
+|:----:|:-----------:|:--------:|:-----:|
+| Saathvika Ajith |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Pranavi Inukurti |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Alice Tang |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Samaya Sankuratri |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Linda Liu |Work on Website Features<br>|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+
+- Individual Scoring
+
+| Name | Journal with TT & TPT Notes | Grade |
+|:----:|:---------------------------:|:-----:|
+| Saathvika Ajith | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Pranavi Inukurti | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Alice Tang | <a href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Journal</a> | 5/5 |
+| Samaya Sankuratri | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+| Linda Liu | <a href="https://docs.google.com/document/d/1PGcv6fkv8A5Y1uzuN-iLSGm9CKhdWEL_fQRZyGv9ymI/edit?usp=sharing">Journal</a> | 5/5 |
+
 
 ###   <h2 id="Week4">Week 4 - "Time to be Resolute": Due 1/7</h2>
 - <a href="https://github.com/samayass/flask_portfolio/projects/1?card_filter_query=milestone%3A%22week+4+-+%5C%22time+to+be+resolute%5C%22%22">Scrum Board</a>
@@ -33,7 +56,7 @@
 | Pranavi Inukurti |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
 | Alice Tang |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
 | Samaya Sankuratri |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
-| Linda Liu |Work on Website Features|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
+| Linda Liu |Work on Website Features<br>|<a href="https://github.com/samayass/flask_portfolio/issues/50">Ticket</a><br>|/5|
 
 - Individual Scoring
 

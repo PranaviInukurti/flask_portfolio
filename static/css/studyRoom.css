@@ -5,6 +5,7 @@ body {
     padding: 0px;
     font-family: helvetica;
 }
+}
 #video_wrapper {
     margin: 0px;
     padding: 0px;
@@ -20,6 +21,7 @@ body {
     height: auto;
     transform: translate(-50%, -50%);
 }
+
 #wrapper {
     position: relative;
     text-align: left;
@@ -35,9 +37,12 @@ p {
 
 h1 {
     font-family: "Blippo";
-    text-align: left;
+    text-align: center;
     padding: 15px;
     color: white;
+    font-size: 50px;
+    width: 40%;
+    background-color: black;
 }
 
 
@@ -297,6 +302,8 @@ ul li.editMode label {
 
 .show {display: block;}
 
+
+
 /* navbar */
 .navbar-nav{
     width: 300px;
@@ -312,4 +319,35 @@ ul li.editMode label {
     font-size: 20px;
     font-family: monospace;
     margin-top: -1px;
+}
+
+/* Background Buttons*/
+#background-button1{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
+}
+
+#background-button2{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
+}
+
+#background-button3{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
+}
+
+#background-button4{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
+}
+
+#background-button5{
+    background-color: white;
+    width: 120px;
+    margin-left: -200px
 }
