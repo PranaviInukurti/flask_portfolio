@@ -2,15 +2,10 @@ import requests
 from flask import Blueprint, render_template
 
 app_homepages = Blueprint('homepages', __name__,
-                          url_prefix='/',
+                          url_prefix='/homepages/',
                           template_folder='templates/homepages/',
                           static_folder='static',
                           static_url_path='static/assets')
-
-
-@app_homepages.route('/')
-def index():
-    return render_template("index.html")
 
 
 @app_homepages.route('/alice/')
