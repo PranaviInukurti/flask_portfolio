@@ -1,0 +1,131 @@
+{% extends "layouts/project.html" %}
+{% block head %}
+    <title>Saathvika</title>
+    <script>
+        function changeImage() {
+
+            if (document.getElementById("imgClickAndChange").src.includes('/static/assets/SAwithoutmask.JPG'))
+            {
+                document.getElementById("imgClickAndChange").src = "/static/assets/SAwithmask.JPG";
+            }
+            else{
+                document.getElementById("imgClickAndChange").src ="/static/assets/SAwithoutmask.JPG"
+            }
+        }
+
+        function getWiki() {
+            fetch("https://hargrimm-wikihow-v1.p.rapidapi.com/steps?count=3", {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "hargrimm-wikihow-v1.p.rapidapi.com",
+                    "x-rapidapi-key": "60a050bd05msh74aa096ce4eab1cp1830c5jsn1612bc7b6d1f"
+                }
+            })
+                .then(response => response.json())  // convert to json
+                .then(json => {
+                    console.log(json);    //print data to console
+                    document.getElementById("display-lyric1").innerText = json["1"];
+                    document.getElementById("display-lyric2").innerText = json["2"];
+                    document.getElementById("display-lyric3").innerText = json["3"];
+                })
+
+                .catch(err => {
+                    console.error(err);
+                });
+        }
+
+
+        let intervalX;
+        function setTime () {
+
+            const y = document.getElementById("time").value;
+
+            // Set the date we're counting down to
+            const countDownDate = new Date(y).getTime();
+
+
+            // Update the count down every 1 second
+            clearInterval(intervalX)
+            intervalX = setInterval(function () {
+
+                // Get today's date and time
+                const now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                const distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="demo"
+                const newDisplay = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                document.getElementById("demo").innerHTML = newDisplay;
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        }
+
+        function stopTime() {
+            let y = document.getElementById("time").value;
+            if (y) {
+                clearInterval(y);
+                y = null;
+            }
+        }
+
+    </script>
+{% endblock %}
+{% block body %}
+    <div style="background-image: url('../../../static/assets/SAbg.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover">
+        <div style="text-align:center; font-family: monospace; font-size: larger; width: 65%; margin: 0 auto 5%;" >
+            <div>
+                <h1 style="background-color: rgba(83,105,122, 0.8); font-family: 'Blippo'; font-size: 75px; text-align: center; padding: 20px; color: papayawhip; text-shadow: 5px 4px black;">Saathvika Ajith</h1>
+                <p style="background-color: rgba(83,105,122, 0.8); font-size: 24px; color: papayawhip; font-family: monospace">Hello there <span id="myName">{{name}}friend</span>, welcome to my individual homepage!</p>
+                <form style="padding: 5px; font-size: 17px; background-color: rgba(83,105,122, 0.8); color: papayawhip; font-family: monospace" action="/saathvika/" id="saathvika2" method="POST" >
+                    <label for="name">Enter Your Name!</label>
+                    <input name="name" id="name">
+                    <input type="submit" value="Go!" onclick="(function (){document.getElementById('myName').innerText=document.getElementById('name').value})();return false;">
+                </form>
+            </div>
+            <br>
+            <div>
+                <p style="background-color: rgba(83,105,122, 0.8); font-size: 20px; font-family: monospace; color: papayawhip">
+                    <img src="/static/assets/SAwithmask.jpg" style="height: 350px; width: auto;" id="imgClickAndChange" onclick="changeImage()" alt="change"/>
+                    <br>
+                    Click me!
+                </p>
+                <p style="background-color: rgba(83,105,122, 0.8); font-size: 20px; color: papayawhip; font-family: monospace">Trimester Work: <br>
+                    <a style="color: #99ba6d" href="https://docs.google.com/document/d/1mfrMqXhbkRceC4fq3nXZMLD8jo5IjC2mwAsvpqjQX94/edit?usp=sharing">Daily Journal</a>
+                    <br><a style="color: #99ba6d" href="https://docs.google.com/document/d/1OkAMgzNODur6Gtonz_EuvoDeVXUnaMvdthtZnsBjXwU/edit">Create Task Planning TPT Notes</a>
+                    <br><a style="color: #99ba6d" href="https://docs.google.com/document/d/1OkAMgzNODur6Gtonz_EuvoDeVXUnaMvdthtZnsBjXwU/edit">StudyOwl BrainWrite</a>
+                    <br><a style="color: #99ba6d" href="https://github.com/samayass/flask_portfolio#readme">ReadMe</a>
+                </p>
+                <div style="background-color: rgba(83,105,122, 0.8)">
+                    <p style="font-size: 50px; padding-top: 15px; color: #99ba6d; font-family: Blippo">Out of Context WikiHow API:</p>
+                    <button id="get-lyric" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="getWiki()">Get me some Instructions!</button>
+                    <div id="display-lyric1" style="margin-top: 25px; font-size: 30px; color: #99ba6d; font-weight: 600; font-family: monospace; text-align: center">No Text Yet</div>
+                    <div id="display-lyric2" style="margin-top: 10px; font-size: 30px; color: #99ba6d; font-weight: 600; font-family: monospace; text-align: center">No Text Yet</div>
+                    <div id="display-lyric3" style="margin-top: 10px; font-size: 30px; color: #99ba6d; font-weight: 600; font-family: monospace; text-align: center">No Text Yet</div>
+                </div>
+                <br>
+                <div style="background-color: rgba(83,105,122, 0.8);" >
+                    <p style="font-size: 25px; color: papayawhip; font-family: monospace">Timer:</p>
+                    <p style="font-size: 50px; color: #99ba6d; font-family: Blippo" id="demo"></p>
+                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter a Time:</label><br>
+                    <input style="font-family: monospace" id="time" placeholder="Jan 1, 2023 00:00:00">
+                    <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="setTime()">Set Timer!</button> <br>
+                    <small style="color: #99ba6d">Format: Jan 1, 2023 00:00:00</small> <br>
+                    <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="stopTime()">Stop Timer!</button>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+{% endblock %}

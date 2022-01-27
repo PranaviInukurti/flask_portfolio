@@ -4,52 +4,11 @@ import requests
 from __init__ import app
 from crud.app_crud import app_crud, users_ilike, user_by_id, users_all
 from crud.model import Users
+from homepages.homepages import app_homepages
 
 app.register_blueprint(app_crud)
+app.register_blueprint(app_homepages)
 
-
-@app.route('/')
-def index():
-    return render_template("index.html")
-
-
-@app.route('/samaya/')
-def samaya():
-    return render_template("samaya.html")
-
-
-@app.route('/alice/')
-def alice():
-    url = "https://brianiswu-cat-facts-v1.p.rapidapi.com/facts"
-
-    headers = {
-        'x-rapidapi-host': "brianiswu-cat-facts-v1.p.rapidapi.com",
-        'x-rapidapi-key': "f877084053msh82cfa972b631ab7p1c4893jsn442e2f514bb0"
-    }
-
-    response = requests.request("GET", url, headers=headers)
-    # list is 5 items long, random number to use as index in list
-    output = response.json()
-    list = []
-    for i in range(len(output)):
-        list.append(output[i]['text'])
-
-    return render_template("alice.html", output=list)
-
-
-@app.route('/pranavi/')
-def pranavi():
-    return render_template("pranavi.html")
-
-
-@app.route('/saathvika/')
-def saathvika():
-    return render_template("saathvika.html")
-
-
-@app.route('/linda/')
-def linda():
-    return render_template("linda.html")
 
 @app.route('/todo/')
 def todo():
