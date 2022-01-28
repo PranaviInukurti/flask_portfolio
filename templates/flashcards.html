@@ -22,8 +22,8 @@
 <br>
 <div id="formContainer">
     <form id="cardForm">
-        <input id="newTerm" type="text" placeholder="Add your own term" onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
-        <input id="newDef" type="text" placeholder="Give a definition" onKeyDown="if(event.keyCode==13) cardAdd()">
+        <input id="newTerm" type="text" placeholder="Term" onKeyDown="if(event.keyCode==13) document.getElementById('newDef').focus()">
+        <input id="newDef" type="text" placeholder="Definition" onKeyDown="if(event.keyCode==13) cardAdd()">
         <br>
         <input id="submit" type="button" value="Add it to the deck" onClick="cardAdd()">
         <br>

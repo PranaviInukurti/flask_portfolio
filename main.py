@@ -1,8 +1,6 @@
 # import "packages" from flask
 from flask import Flask, render_template, request, url_for, redirect, jsonify, make_response
 import requests
-
-import linda
 from __init__ import app
 from crud.app_crud import app_crud, users_ilike, user_by_id, users_all
 from crud.model import Users
