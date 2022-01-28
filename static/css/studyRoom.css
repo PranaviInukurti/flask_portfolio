@@ -214,7 +214,15 @@ ul li.editMode label {
 #show-todo {
     margin-top: 20px;
     height: 35px;
-    width: 88px;
+    width: 50px;
+    background: white;
+    color: black;
+}
+
+#show-timer {
+    margin-top: 20px;
+    height: 35px;
+    width: 50px;
     background: white;
     color: black;
 }

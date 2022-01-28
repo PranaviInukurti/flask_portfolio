@@ -81,6 +81,21 @@
 
                     <br>
 
+                    <!- Timer ->
+                    <div style="margin-left:-200px">
+                        <div style="display: flex"> <button id="show-timer" onclick="showTimer()"><img src="https://www.vhv.rs/dpng/d/195-1958831_plus-sign-icon-clipart-and-minus-signs-transparent.png" alt="Plus Sign" width="45" height="22" style="margin-left:-2.5px"></button> <div style="color: white;margin-top: 28px; margin-left:5px;font-family: cursive; background-color: rgba(112, 112, 112, 0.51)"> Timer </div> </div>
+                        <div style="margin-left:-5px; background-color: white;" class="container" id="timer">
+                        <label style="font-size: 20px; color: black; font-family: monospace;padding: 10px 0 10px; margin: 0;">Enter a Time:</label><br>
+                        <p style="font-size: 20px; color: black; font-family: monospace" id="demo"></p>
+                        <input style="font-family: monospace" id="time" placeholder="Jan 1, 2023 00:00:00">
+                        <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="setTime()">Set</button> <br>
+                        <small style="color: #99ba6d">Format: Jan 1, 2023 00:00:00</small> <br>
+                        <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="stopTime()">Stop</button>
+                    </div>
+                    </div>
+
+                    <br>
+
                     <!- Change Backgrounds _>
                     <div> <button id="background-button1" onclick="changeBackground()"> <img src="/static/assets/studyBackground2.gif" alt="studyBackground1" width="120px" height="82px"> </button> </div>
                     <div> <button id="background-button2" onclick="changeBackground2()"> <img src="/static/assets/studyBackground4 (1).gif" alt="studyBackground2" width="120px" height="82px"> </button> </div>
