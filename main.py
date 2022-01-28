@@ -21,7 +21,7 @@ def todo():
 
 
 @app.route('/flashcards/')
-def todo():
+def flashcards():
     return render_template("flashcards.html")
 
 
