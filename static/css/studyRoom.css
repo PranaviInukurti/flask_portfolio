@@ -243,6 +243,22 @@ ul li.editMode label {
     color: black;
 }
 
+#rain-button {
+    margin-top: 20px;
+    height: 35px;
+    width: 50px;
+    background: white;
+    color: black;
+}
+
+#jazz-button {
+    margin-top: 20px;
+    height: 35px;
+    width: 50px;
+    background: white;
+    color: black;
+}
+
 /* digital clock */
 #clock {
     font-size: 35px;
