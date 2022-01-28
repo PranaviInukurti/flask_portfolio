@@ -37,10 +37,15 @@
                     </a>
                     <p style id="todo">To-Do List</p>
                 </div>
+                <div id="notepadICON">
+                    <a href={{ url_for('notepad') }}>
+                        <img id="notepadIMG" alt="notepad" src="/static/assets/notepadICON.png" width=240" height="150">
+                    </a>
+                    <p style id="notepad">Notepad</p>
+                </div>
                 <div id="calendarICON">
                     <img id="calendarIMG" alt="calendar" src="/static/assets/comingsoonICON.png" width=240" height="150" onclick="comingsoonALERT()">
                     <p style id="calendar">Calendar</p>
-
                     <script>
                         function comingsoonALERT() {
                             alert("This feature is not available yet.");
@@ -116,6 +121,13 @@
              width:20%;
              height:200px;
         }
+        #notepadICON{
+            position: relative;
+            left: 65px;
+            float: left;
+            width:20%;
+            height:200px;
+        }
         #calendarICON{
             position: relative;
             left: 65px;
@@ -127,6 +139,9 @@
             border-radius: 25px;
         }
         #studyroomIMG{
+            border-radius: 25px;
+        }
+        #notepadIMG{
             border-radius: 25px;
         }
         #calendarIMG{
@@ -141,6 +156,14 @@
             color: var(--clr-font);
         }
         #todo{
+            position: relative;
+            left: 75px;
+            font-family: 'Helvetica';
+            font-size: 20px;
+            font-weight: 300;
+            color: var(--clr-font);
+        }
+        #notepad{
             position: relative;
             left: 75px;
             font-family: 'Helvetica';
