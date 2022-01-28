@@ -20,6 +20,12 @@ def todo():
     return render_template("todo.html")
 
 
+@app.route('/flashcards/')
+def todo():
+    return render_template("flashcards.html")
+
+
+
 @app.route('/studyroom/')
 def studyroom():
     return render_template("studyroom.html")
