@@ -11,20 +11,20 @@
                     <div class="color-switch-toggle"></div>
                 </label>
             </div>
-            <img src="/static/assets/STUD2.png" style="height: 550px; width: 550px;" id="STUD" onclick="greetSTUD()"/>
-                <script>
-                    function greetSTUD() {
-                        alert("Hello! I am STUD the study owl!");
-                    }
-                </script>
             <h1 style id="StudyOwl" >StudyOwl</h1>
+            <img src="/static/assets/STUD2.png" style="height: 550px; width: 550px;" id="STUD" onclick="greetSTUD()"/>
+            <script>
+                function greetSTUD() {
+                    alert("Hello! I am STUD the study owl!");
+                }
+            </script>
             <p style id="bestway">THE BEST WAY TO STUDY, IS WITH STUD</p>
             <p style id="tool">StudyOwl is a academic tool designed to help students study in a more focused and <br> efficient manner. StudyOwl offers features such as a customizable study buddy owl, <br> a StudyRoom, a To-Do list, a self timer, and many more that inspires students to study.</p>
             <br>
             <br>
             <br>
+            <p style id="checkout">Check out some of our study tools below!</p>
             <div id = toolICON>
-                <p style id="checkout">Check out some of our study tools below!</p>
                 <div id="studyroomICON">
                     <a href={{ url_for('studyroom') }}>
                         <img id="studyroomIMG" alt="studyroom" src="/static/assets/studyroomICON2.png" width=240" height="150">
@@ -43,6 +43,8 @@
                     </a>
                     <p style id="notepad">Notepad</p>
                 </div>
+            </div>
+            <div id=toolICON2>
                 <div id="calendarICON">
                     <img id="calendarIMG" alt="calendar" src="/static/assets/comingsoonICON.png" width=240" height="150" onclick="comingsoonALERT()">
                     <p style id="calendar">Calendar</p>
@@ -64,7 +66,7 @@
         }
         #STUD{
             position: absolute;
-            left: 1000px;
+            left: 68%;
         }
         #StudyOwl{
             position: relative;
@@ -95,6 +97,11 @@
             text-align: left;
             padding: 0px;
             color: var(--clr-font);
+        }
+        #toolICON{
+            display: flex;
+            flex-wrap: wrap;
+            width:1300px;
         }
         #checkout{
             position: relative;
