@@ -1,21 +1,19 @@
 {% extends "layouts/project.html" %}
 {% block body %}
 <body>
-<h1>Flashcards </h1><br><br>
-<p id="front">
-{#back of front#}
-</p><br>
-<hr><br>
-<div id="back">
+<img src="/static/img/studstud.png" style="height: 200px; width: auto;" id="stud" />
+
+<div id="front1"><p id="front"> </div>
+<p id="back"> </p>
+
 {#back of flashcard#}
 </div><br>
 <div id ="activeCardButtons">
-    <button id="prev" onclick="prevCard()">
-    </button>
+    <img src="/static/img/arrow_left.png" style="height: 100px; width: auto;" id="prev" onclick="prevCard()"/>
+
     <button id="flip" type="button" value="Flip" onclick="flash()">
         Flip</button>
-    <button id="next" onclick="nextCard()">
-    </button>
+    <img src="/static/img/arrow_right.png" style="height: 90px; width: auto;" id="next" onclick="nextCard()"/>
 </div>
 <br>
 <br>
@@ -35,7 +33,7 @@
 
 <style>
     body{
-        background-color: #ffffff;
+        background-color: #4670D1;
     }
 
     html{
@@ -56,6 +54,25 @@
         height:100%;
         overflow:screen;
     }
+
+    #stud {
+        position:absolute;
+        top:75px;
+        left: 640px;
+
+    }
+    #front1 {
+        width: 600px;
+        height: 400px;
+        background-color: #F5F5F5;
+        border-radius: 40px;
+        box-shadow: 7px 7px #34549c;
+        position: absolute;
+        top:200px;
+        left: 450px;
+
+    }
+
     h1{
         position: relative;
         text-align: center;
@@ -66,10 +83,17 @@
     p {
         text-align: center;
     }
-    #front, #back {
+    #back {
         min-width:100%;
         max-width:900px;
-        text-align: center;
+        position:absolute;
+        top:370px;
+    }
+    #front {
+        min-width:100%;
+        max-width:900px;
+        position:absolute;
+        top:170px;
     }
     #activeCardButtons {
         min-width: 100%;
@@ -80,15 +104,14 @@
     }
     #prev {
         position:absolute;
-        left:4%;
-        border-top: 25px solid transparent;
-        border-right: 50px solid darkblue;
-        border-bottom: 25px solid transparent;
+        top:350px;
+        left:200px;
     }
 
     #flip {
         position:absolute;
         width: 50px;
+        top: 560px;
         left:48%;
         display:block;
         height: 30px;
@@ -99,16 +122,13 @@
     }
     #next {
         position:absolute;
-        right: 4%;
-        width: 0;
-        height: 0;
-        border-top: 25px solid transparent;
-        border-left: 50px solid darkblue;
-        border-bottom: 25px solid transparent;
+        top:350px;
+        right: 200px;
+
     }
     #submit {
         position:relative;
-        top: -20px;
+        top: 390px;
         right: -90px;
         width:180px;
         margin-top:10px;
@@ -132,7 +152,7 @@
 
     #clearDeck{
         position:relative;
-        top: 100px;
+        top: 430px;
         height: 30px;
         width:360px;
         margin-left:-90px;
@@ -153,7 +173,7 @@
     }
     #newTerm{
         position:relative;
-        top: 70px;
+        top: 480px;
         right: 100px;
         width:180px;
         margin-top:10px;
@@ -166,7 +186,7 @@
     #newDef{
         position:relative;
         right: 100px;
-        top: 68px;
+        top: 480px;
         width:180px;
         margin-top:10px;
         display:block;
