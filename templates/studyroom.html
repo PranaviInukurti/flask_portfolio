@@ -23,20 +23,21 @@
         <div id="wrapper">
 
             <div style="display: flex">
+                <div style="display: flex"> <button style="margin-left: -100px" id="rain-button" onclick="playRain()">Rain</button> </div>
                 <div>
-            <audio loop controls autoplay>
-                <source src="/static/rain.mp3" type="audio/mpeg">
+            <audio loop id="rain" src=/static/rain.mp3 type="audio/mpeg">
             </audio>
                 </div>
 
+
+                <div style="display: flex"> <button id="jazz-button" onclick="playJazz()">Jazz</button> </div>
                 <div>
-            <audio loop controls autoplay>
-                <source src="/static/jazz.mp3" type="audio/mpeg">
+            <audio loop id="jazz" src="/static/jazz.mp3" type="audio/mpeg">
             </audio>
                 </div>
 
             <!-Digital Clock->
-            <div class="container" id="clock" style="display: block; margin-left:350px">
+            <div class="container" id="clock" style="display: block; margin-left:950px">
 
                 <meta charset="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -52,13 +53,13 @@
 
                 <div>
 
-                    <h1 style="text-shadow: 4px 4px #232C33;background-color: rgba(105,105,105,0.5); text-align: center; width: 40%;">Study Room</h1>
 
+                    <h1 style="text-shadow: 4px 4px #232C33;background-color: rgba(105,105,105,0.5); text-align: center; width: 40%;">Study Room</h1>
 
 
                     <!-Todo List->
                    <div style="margin-left:-200px">
-                    <div style="display: flex"> <button style="width:60px" id="show-todo" onclick="showTodo()"><img src="https://th.bing.com/th/id/OIP.VjQF4ZjCQrpTZxMCo-PdFgHaHa?w=218&h=218&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Plus Sign" width="15" height="15"></button> <div style="color: white;margin-top: 28px; margin-left:5px;font-family: cursive; background-color: rgba(112, 112, 112, 0.51)"> Todo List </div> </div>
+                    <div style="display: flex"> <button id="show-todo" onclick="showTodo()"><img src="https://www.vhv.rs/dpng/d/195-1958831_plus-sign-icon-clipart-and-minus-signs-transparent.png" alt="Plus Sign" width="45" height="22" style="margin-left:-2.5px" ></button> <div style="color: white;margin-top: 28px; margin-left:5px;font-family: cursive; background-color: rgba(112, 112, 112, 0.51)"> Todo List </div> </div>
                     <div style="margin-left:-5px"; class="container" id="todo-list">
 
                         <h3>Add Item</h3>
@@ -81,6 +82,21 @@
 
                     <br>
 
+                    <!- Timer ->
+                    <div style="margin-left:-200px">
+                        <div style="display: flex"> <button id="show-timer" onclick="showTimer()"><img src="https://www.vhv.rs/dpng/d/195-1958831_plus-sign-icon-clipart-and-minus-signs-transparent.png" alt="Plus Sign" width="45" height="22" style="margin-left:-2.5px"></button> <div style="color: white;margin-top: 28px; margin-left:5px;font-family: cursive; background-color: rgba(112, 112, 112, 0.51)"> Timer </div> </div>
+                        <div style="margin-left:-5px; background-color: white;" class="container" id="timer">
+                        <label style="font-size: 20px; color: black; font-family: monospace;padding: 10px 0 10px; margin: 0;">Enter a Time:</label><br>
+                        <p style="font-size: 20px; color: black; font-family: monospace" id="demo"></p>
+                        <input style="font-family: monospace" id="time" placeholder="Jan 1, 2023 00:00:00">
+                        <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="setTime()">Set</button> <br>
+                        <small style="color: #99ba6d">Format: Jan 1, 2023 00:00:00</small> <br>
+                        <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="stopTime()">Stop</button>
+                    </div>
+                    </div>
+
+                    <br>
+
                     <!- Change Backgrounds _>
                     <div> <button id="background-button1" onclick="changeBackground()"> <img src="/static/assets/studyBackground2.gif" alt="studyBackground1" width="120px" height="82px"> </button> </div>
                     <div> <button id="background-button2" onclick="changeBackground2()"> <img src="/static/assets/studyBackground4 (1).gif" alt="studyBackground2" width="120px" height="82px"> </button> </div>
@@ -90,9 +106,9 @@
 
 
                     <!-Random Motivational Quote Api->
-                    <div style="margin-top:350px;margin-left:-200px">
-                        <div style="display:flex"> <button id="get-quote" style="margin-top: 20px; margin-right: 10px; height: 35px;width:60px" onclick="newQuote()"><img src="/static/assets/STUD.png" alt="Stud" width="70px" height="70px" style="margin-top: -10px;"></button> <button id="on-off" style="color: black; margin-top: 20px;height: 35px;" onclick="onOff()"><img src="https://cdn0.iconfinder.com/data/icons/controls-and-navigation-arrows-3/24/146-512.png" alt="X Sign" width="15" height="15"></button> </div>
-                        <div id="display-quote" style="margin-top: 10px; margin-right: 200px; font-size: 20px;color: white;font-weight: 600; text-align: left; background-color: rgba(112, 112, 112, 0.51)">No quote yet</div>
+                    <div style="margin-left:600px">
+                        <div style="display: flex"> <button id="get-quote" style="margin-top: -120px; margin-right: 10px; height: 35px;width:60px" onclick="newQuote()"><img src="/static/assets/STUD.png" alt="Stud" width="70px" height="70px" style="margin-top:-10px; margin-left: -12px;"></button> <button id="on-off" style="color: black; margin-top: -120px;height: 35px;" onclick="onOff()"><img src="https://cdn0.iconfinder.com/data/icons/controls-and-navigation-arrows-3/24/146-512.png" alt="X Sign" width="15" height="15"></button> </div>
+                        <div id="display-quote" style="margin-top: -75px; font-size: 20px;color: white;font-weight: 600; text-align: left; background-color: rgba(112, 112, 112, 0.51); width: 630px">No quote yet</div>
                     </div>
 
 

@@ -293,3 +293,67 @@ function changeBackground5() {
 }
 
 
+//Timer
+function showTimer(){
+    if(document.getElementById("timer").style.display === "block"){
+        document.getElementById("timer").style.display = "none"
+    }else document.getElementById("timer").style.display = "block";
+}
+
+let intervalX;
+function setTime() {
+
+    const y = document.getElementById("time1").value;
+
+    // Set the date we're counting down to
+    const countDownDate = new Date(y).getTime();
+
+
+    // Update the count down every 1 second
+    clearInterval(intervalX)
+    intervalX = setInterval(function () {
+
+        // Get today's date and time
+        const now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        const distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        const newDisplay = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById("demo").innerHTML = newDisplay;
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+}
+
+function stopTime() {
+    let y = document.getElementById("time").value;
+    if (y) {
+        clearInterval(y);
+        y = null;
+    }
+}
+
+
+//music
+function playRain() {
+    if (document.getElementById('rain') === document.getElementById('rain').play()) {
+        document.getElementById('rain').pause();
+    }
+    else document.getElementById('rain').play();
+}
+
+function playJazz() {
+    document.getElementById('jazz').play();
+}
