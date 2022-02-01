@@ -6,13 +6,33 @@ from crud.model import Users
 
 # blueprint defaults https://flask.palletsprojects.com/en/2.0.x/api/#blueprint-objects
 app_crud = Blueprint('crud', __name__,
-                     url_prefix='/crud',
-                     template_folder='templates/layouts/layoutcrud/',
+                     url_prefix='/crud/',
+                     template_folder='templates/crud/',
                      static_folder='static',
                      static_url_path='assets')
 
 # API generator https://flask-restful.readthedocs.io/en/latest/api.html#id1
 api = Api(app_crud)
+
+
+@app_crud.route('/crudtable/')
+def crudtable():
+    return render_template("crudtable.html", table=users_all())
+
+
+@app_crud.route('/search/')
+def search():
+    return render_template("search.html")
+
+
+@app_crud.route('/search/term/', methods=["POST"])
+def search_term():
+    """ obtain term/search request """
+    req = request.get_json()
+    term = req['term']
+    response = make_response(jsonify(users_ilike(term)), 200)
+    return response
+
 
 """ Application control for CRUD is main focus of this File, key features:
     1.) User table queries
@@ -84,7 +104,7 @@ def read():
         po = user_by_id(userid)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
-    return render_template("crudtable.html", table=table)
+    return render_template("templates/crud/crudtable.html", table=table)
 
 
 # CRUD create/add

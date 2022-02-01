@@ -28,8 +28,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
                         <button onclick="myFunction2()" class="dropbtn">CRUD</button>
                         <div id="Dropdown2" class="dropdown-content">
-                            <a style="color: ghostwhite" class="nav-link" href="{{ url_for('crudtable') }}">Table</a>
-                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('search') }}>Search</a>
+                            <a style="color: ghostwhite" class="nav-link" href="{{ url_for('crud.crudtable') }}">Data Table</a>
+                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('crud.search') }}>Data Search</a>
                         </div>
                     </div>
 
@@ -37,8 +37,11 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <button onclick="myFunction3()" class="dropbtn">Tools</button>
                         <div id="Dropdown3" class="dropdown-content">
                             <a style="color: ghostwhite" class="nav-link" href={{ url_for('studyroom') }}>StudyRoom</a>
-                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('todo') }}>To-Do List</a>
-                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('calculator') }}>Calculator</a>
+                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('tools.todo') }}>To-Do List</a>
+                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('tools.calculator') }}>Calculator</a>
+                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('tools.notepad') }}>Notepad</a>
+                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('tools.websearch') }}>Search</a>
+                            <a style="color: ghostwhite" class="nav-link" href={{ url_for('tools.flashcards') }}>Flashcards</a>
                         </div>
                     </div>
                 </div>
