@@ -23,14 +23,20 @@
         <div id="wrapper">
 
             <div style="display: flex">
-                <div style="display: flex"> <button style="margin-left: -100px" id="rain-button" onclick="playRain()">Rain</button> </div>
+                <div style="display: flex">
+                    <button style="margin-left: -100px" id="rain-button" onclick="playRain()">Rain</button>
+                    <button style="margin-left: -100px" id="rain-button" onclick="pauseRain()">Pause</button>
+                </div>
                 <div>
             <audio loop id="rain" src=/static/rain.mp3 type="audio/mpeg">
             </audio>
                 </div>
 
 
-                <div style="display: flex"> <button id="jazz-button" onclick="playJazz()">Jazz</button> </div>
+                <div style="display: flex">
+                    <button id="jazz-button" onclick="playJazz()">Jazz</button>
+                    <button id="jazz-button" onclick="pauseJazz()">Pause</button>
+                </div>
                 <div>
             <audio loop id="jazz" src="/static/jazz.mp3" type="audio/mpeg">
             </audio>

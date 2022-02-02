@@ -348,12 +348,21 @@ function stopTime() {
 
 //music
 function playRain() {
-    if (document.getElementById('rain') === document.getElementById('rain').play()) {
-        document.getElementById('rain').pause();
-    }
-    else document.getElementById('rain').play();
+    document.getElementById('rain').play();
+    // if (document.getElementById('rain') === document.getElementById('rain').play()) {
+    //     document.getElementById('rain').pause();
+    // }
+    // else document.getElementById('rain').play();
+}
+
+function pauseRain() {
+    document.getElementById('rain').pause();
 }
 
 function playJazz() {
     document.getElementById('jazz').play();
+}
+
+function pauseJazz() {
+    document.getElementById('jazz').pause();
 }
