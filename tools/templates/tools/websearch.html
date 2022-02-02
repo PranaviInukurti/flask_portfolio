@@ -1,12 +1,17 @@
+{% extends "layouts/project.html" %}
+{% block body %}
 <!DOCTYPE html>
 <html lang='en' class=''>
 <head>
     <meta charset='UTF-8'>
     <title>Search Bar Demo</title>
     <style>
+        h1{
+          color: white;
+        }
         body {
             background-color: #3745c2;
-            margin: 200px 40%;
+            width: 100%;
         }
 
         form {
@@ -50,6 +55,7 @@
     </style>
 </head>
 <body>
+<h1>Search</h1>
 <form role="search" id="form">
     <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
     <button>
@@ -60,7 +66,7 @@
     const f = document.getElementById('form');
     const q = document.getElementById('query');
     const google = 'https://www.google.com/search?q=site%3A+';
-    const site = 'pagedart.com';
+    const site = 'studyowl.tk:8080';
 
     function submitted(event) {
         event.preventDefault();
@@ -73,3 +79,4 @@
 </script>
 </body>
 </html>
+{% endblock %}
