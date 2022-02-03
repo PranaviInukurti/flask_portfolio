@@ -30,3 +30,8 @@ def websearch():
 @app_tools.route('/flashcards/')
 def flashcards():
     return render_template("flashcards.html")
+
+
+@app_tools.route('/googlesearch/')
+def googlesearch():
+    return render_template("googlesearch.html")
