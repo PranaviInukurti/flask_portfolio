@@ -14,8 +14,8 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                         <a style="color: ghostwhite; font-size: 21px;" class="nav-link" href={{ url_for('index') }}>Home</a>
                     </div>
                     <div>
-                        <a style="color: ghostwhite; font-size: 21px;" class="nav-link" href={{ url_for('studyroom') }}>StudyRoom</a>
-                    </div>
+                    <a style="color: ghostwhite; font-size: 21px;" class="nav-link" href={{ url_for('studyroom') }}>StudyRoom</a>
+                </div>
 
                     <div class="dropdown" style="font-family: monospace; color: ghostwhite">
                         <button onclick="myFunction1()" class="dropbtn">About Us</button>
@@ -36,6 +36,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                             <a style="color: ghostwhite" class="nav-link" href={{ url_for('tools.notepad') }}>Notepad</a>
                             <a style="color: ghostwhite" class="nav-link" href={{ url_for('tools.websearch') }}>Search</a>
                             <a style="color: ghostwhite" class="nav-link" href={{ url_for('tools.flashcards') }}>Flashcards</a>
+                            <a style="color: ghostwhite" class="nav-link" href="{{ url_for('tools.snake') }}">Snake</a>
                         </div>
                     </div>
 
@@ -46,6 +47,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                             <a style="color: ghostwhite" class="nav-link" href={{ url_for('crud.search') }}>Data Search</a>
                         </div>
                     </div>
+
 
                 </div>
             </div>
