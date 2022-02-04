@@ -40,3 +40,7 @@ def googlesearch():
 def snake():
     return render_template("snake.html")
 
+@app_tools.route('/graph/')
+def graph():
+    return render_template("graph.html")
+
