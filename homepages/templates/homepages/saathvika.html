@@ -54,7 +54,7 @@
             // APPARENTLY THE CODE DOESN'T WORK, UNLESS I DIVIDE IT BY SOMETHING??!?!??!
             // So I'll divide it by 1. If I don't, inputting 10 seconds will somehow turn into 1000 seconds.
             // FOR NO REASON!!! Same for minutes and hours.
-            distance = (seconds_distance / 1) + (minutes_distance * 60 / 1) + (hours_distance * 360 / 1);
+            distance = (seconds_distance / 1) + (minutes_distance * 60 / 1) + (hours_distance * 3600 / 1);
 
             // Commented this line of code out, didn't know what it did
             // clearInterval(intervalX);
