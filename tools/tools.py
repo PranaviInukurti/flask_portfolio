@@ -36,11 +36,6 @@ def flashcards():
 def googlesearch():
     return render_template("googlesearch.html")
 
-@app_tools.route('/snake/')
-def snake():
-    return render_template("snake.html")
 
-@app_tools.route('/graph/')
-def graph():
-    return render_template("graph.html")
+
 
