@@ -36,47 +36,65 @@
 
 
         let intervalX;
+        let distance;
+        // If stoppingCondition is false, the distance variable gets reduced by 1 per second.
+        let stoppingCondition = true;
+        // Prevents the function from being run more than once.
+        let isStarted = false;
         function setTime () {
 
-            const y = document.getElementById("time").value;
+            // Stops the timer.
+            stoppingCondition = true;
+            // Gets the user input.
+            distance = document.getElementById("time").value;
+            // Turns distance into minutes.
+            distance = distance * 60;
 
-            // Set the date we're counting down to
-            const countDownDate = new Date(y).getTime();
+            // Commented this line of code out, didn't know what it did
+            // clearInterval(intervalX);
 
+            // Sets the text to the user input.
+            document.getElementById("demo").innerHTML = distance + "s";
+        }
 
-            // Update the count down every 1 second
-            clearInterval(intervalX)
-            intervalX = setInterval(function () {
+        function resumeTime() {
+            // Starts the timer.
+            stoppingCondition = false;
 
-                // Get today's date and time
-                const now = new Date().getTime();
+            // Prevents the function from being run more than once.
+            if (isStarted == false) {
+                intervalX = setInterval(function () {
 
-                // Find the distance between now and the count down date
-                const distance = countDownDate - now;
+                    // Prevents the function from being run more than once.
+                    isStarted = true;
 
-                // Time calculations for days, hours, minutes and seconds
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    // Find the distance between now and the count down date
 
-                // Display the result in the element with id="demo"
-                document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                    // If stoppingCondition is false, the distance variable gets reduced by 1 per second.
+                    if (stoppingCondition == false) {
+                        distance -= 1;
+                    }
 
-                // If the count down is finished, write some text
-                if (distance < 0) {
-                    clearInterval(intervalX);
-                    document.getElementById("demo").innerHTML = "EXPIRED";
-                }
-            }, 1000);
+                    // Time calculations for days, hours, minutes and seconds
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Display the result in the element with id="demo"
+                    document.getElementById("demo").innerHTML = distance + "s" /*days + "d " + hours + "h " + minutes + "m " + seconds + "s "*/;
+
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                        clearInterval(intervalX);
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+            }
         }
 
         function stopTime() {
-            let y = document.getElementById("time").value;
-            if (y) {
-                clearInterval(intervalX);
-                y = null;
-            }
+            stoppingCondition = true;
         }
 
     </script>
@@ -117,11 +135,12 @@
                 <div style="background-color: rgba(83,105,122, 0.8);" >
                     <p style="font-size: 25px; color: papayawhip; font-family: monospace">Timer:</p>
                     <p style="font-size: 50px; color: #99ba6d; font-family: Blippo" id="demo"></p>
-                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter a Time:</label><br>
-                    <input style="font-family: monospace" id="time" placeholder="Jan 1, 2023 00:00:00">
+                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter a Time in minutes:</label><br>
+                    <input style="font-family: monospace" id="time" placeholder="15">
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="setTime()">Set Timer!</button> <br>
                     <small style="color: #99ba6d">Format: Jan 1, 2023 00:00:00</small> <br>
-                    <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="stopTime()">Stop Timer!</button>
+                    <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="resumeTime()">Start Timer!</button>
+                    <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="stopTime()">Pause Timer!</button>
                 </div>
             </div>
             <br><br>
