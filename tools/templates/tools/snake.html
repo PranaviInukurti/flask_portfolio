@@ -1,5 +1,5 @@
-
-{% block meta %}
+{% extends "layouts/project.html" %}
+{% block head %}
     <!DOCTYPE HTML>
     <!-- Page specific head additions -->
     <title>Snake Game</title>
@@ -70,7 +70,7 @@
 
 
 <<!-- <body> -->
-{% block content %}
+{% block body %}
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom border-primary text-dark">
             <span class="fs-4">Snake</span>
