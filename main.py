@@ -24,6 +24,9 @@ def studyroom():
 def snake():
     return render_template("snake.html")
 
+@app.route('/graph/')
+def graph():
+    return render_template("graph.html")
 
 # runs the application on the development server
 if __name__ == "__main__":
