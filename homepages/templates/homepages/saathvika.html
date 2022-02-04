@@ -37,6 +37,7 @@
 
         let intervalX;
         let distance;
+
         // If stoppingCondition is false, the distance variable gets reduced by 1 per second.
         let stoppingCondition = true;
         // Prevents the function from being run more than once.
@@ -46,9 +47,14 @@
             // Stops the timer.
             stoppingCondition = true;
             // Gets the user input.
-            distance = document.getElementById("time").value;
-            // Turns distance into minutes.
-            distance = distance * 60;
+            const hours_distance = document.getElementById("hours_time").value;
+            const minutes_distance = document.getElementById("minutes_time").value;
+            const seconds_distance = document.getElementById("seconds_time").value;
+            // Turns distance into hours/minutes/seconds.
+            // APPARENTLY THE CODE DOESN'T WORK, UNLESS I DIVIDE IT BY SOMETHING??!?!??!
+            // So I'll divide it by 1. If I don't, inputting 10 seconds will somehow turn into 1000 seconds.
+            // FOR NO REASON!!! Same for minutes and hours.
+            distance = (seconds_distance / 1) + (minutes_distance * 60 / 1) + (hours_distance * 360 / 1);
 
             // Commented this line of code out, didn't know what it did
             // clearInterval(intervalX);
@@ -76,17 +82,18 @@
                     }
 
                     // Time calculations for days, hours, minutes and seconds
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    // const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    // const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    // const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                     // Display the result in the element with id="demo"
                     document.getElementById("demo").innerHTML = distance + "s" /*days + "d " + hours + "h " + minutes + "m " + seconds + "s "*/;
 
                     // If the count down is finished, write some text
                     if (distance < 0) {
-                        clearInterval(intervalX);
+                        // Commented this line of code out, caused a bug where the timer wouldn't start again after EXPIRED'ing
+                        // clearInterval(intervalX);
                         document.getElementById("demo").innerHTML = "EXPIRED";
                     }
                 }, 1000);
@@ -135,8 +142,12 @@
                 <div style="background-color: rgba(83,105,122, 0.8);" >
                     <p style="font-size: 25px; color: papayawhip; font-family: monospace">Timer:</p>
                     <p style="font-size: 50px; color: #99ba6d; font-family: Blippo" id="demo"></p>
-                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter a Time in minutes:</label><br>
-                    <input style="font-family: monospace" id="time" placeholder="15">
+                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Hours:</label>
+                    <input style="font-family: monospace" id="hours_time" placeholder="0"><br>
+                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Minutes:</label>
+                    <input style="font-family: monospace" id="minutes_time" placeholder="15"><br>
+                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Seconds:</label>
+                    <input style="font-family: monospace" id="seconds_time" placeholder="00"><br>
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="setTime()">Set Timer!</button> <br>
                     <small style="color: #99ba6d">Format: Jan 1, 2023 00:00:00</small> <br>
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="resumeTime()">Start Timer!</button>
