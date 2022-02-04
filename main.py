@@ -20,6 +20,10 @@ def studyroom():
     return render_template("studyroom.html")
 
 
+@app.route('/snake/')
+def snake():
+    return render_template("snake.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
