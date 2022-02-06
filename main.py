@@ -19,6 +19,10 @@ def index():
 def studyroom():
     return render_template("studyroom.html")
 
+@app.route('/calendar/')
+def calendar():
+    return render_template("calendar.html")
+
 
 
 # runs the application on the development server
