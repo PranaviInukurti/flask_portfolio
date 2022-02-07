@@ -38,6 +38,11 @@
         let intervalX;
         let distance;
 
+        // 3 values for hours minutes and seconds, only for display
+        let hours = 0;
+        let minutes = 0;
+        let seconds = 0;
+
         // If stoppingCondition is false, the distance variable gets reduced by 1 per second.
         let stoppingCondition = true;
         // Prevents the function from being run more than once.
@@ -56,11 +61,16 @@
             // FOR NO REASON!!! Same for minutes and hours.
             distance = (seconds_distance / 1) + (minutes_distance * 60 / 1) + (hours_distance * 3600 / 1);
 
+            // Display values for hours, minutes, and seconds.
+            hours = hours_distance / 1;
+            minutes = minutes_distance / 1;
+            seconds = seconds_distance / 1;
+
             // Commented this line of code out, didn't know what it did
             // clearInterval(intervalX);
 
             // Sets the text to the user input.
-            document.getElementById("demo").innerHTML = distance + "s";
+            document.getElementById("demo").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
         }
 
         function resumeTime() {
@@ -81,14 +91,33 @@
                         distance -= 1;
                     }
 
+                    // Changes display values
+                    // I could have just used this instead of the distance variable, but at this point I'm too lazy to change it
+                    // If you all feel like cleaning up the code:
+                    // you'd change the EXPIRED code down below to read (if hours, minutes, and seconds < 0) instead of the current (if distance < 0)
+                    // and get rid of the distance variable in the setTime function and the let statement up above.
+                    // I'm not sure if there are other things, so I don't want to change it for now. The code works, so it works.
+                    if (stoppingCondition == false) {
+                        seconds = seconds - 1;
+                        if (seconds < 0) {
+                            seconds = 59;
+                            minutes = minutes - 1;
+                        }
+                        if (minutes < 0) {
+                            minutes = 59;
+                            hours = hours - 1;
+                        }
+                    }
+
                     // Time calculations for days, hours, minutes and seconds
+                    // Commented out because we're no longer using the date-time system
                     // const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                     // const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                     // const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                     // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                     // Display the result in the element with id="demo"
-                    document.getElementById("demo").innerHTML = distance + "s" /*days + "d " + hours + "h " + minutes + "m " + seconds + "s "*/;
+                    document.getElementById("demo").innerHTML = hours + "h " + minutes + "m " + seconds + "s " /*days + "d " + hours + "h " + minutes + "m " + seconds + "s "*/;
 
                     // If the count down is finished, write some text
                     if (distance < 0) {
@@ -143,13 +172,13 @@
                     <p style="font-size: 25px; color: papayawhip; font-family: monospace">Timer:</p>
                     <p style="font-size: 50px; color: #99ba6d; font-family: Blippo" id="demo"></p>
                     <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Hours:</label>
-                    <input style="font-family: monospace" id="hours_time" placeholder="0"><br>
+                    <input style="font-family: monospace" id="hours_time" placeholder="1"><br>
                     <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Minutes:</label>
-                    <input style="font-family: monospace" id="minutes_time" placeholder="15"><br>
+                    <input style="font-family: monospace" id="minutes_time" placeholder="30"><br>
                     <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Seconds:</label>
-                    <input style="font-family: monospace" id="seconds_time" placeholder="00"><br>
+                    <input style="font-family: monospace" id="seconds_time" placeholder="0"><br>
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="setTime()">Set Timer!</button> <br>
-                    <small style="color: #99ba6d">Format: Jan 1, 2023 00:00:00</small> <br>
+                    <small style="color: #99ba6d">Format: 1h 30m 0s</small> <br>
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="resumeTime()">Start Timer!</button>
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="stopTime()">Pause Timer!</button>
                 </div>
