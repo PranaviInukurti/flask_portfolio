@@ -4,9 +4,6 @@
     <!-- Page specific head additions -->
     <title>Snake Game</title>
     <style>
-
-        body{
-        }
         .wrap{
             margin-left: auto;
             margin-right: auto;
@@ -71,6 +68,7 @@
 
 <<!-- <body> -->
 {% block body %}
+    <body style="background-image: url('/static/assets/studyBackground3.gif');background-attachment: fixed;background-size: cover;">
     <div class="container py-4">
         <header class="pb-3 mb-4 border-bottom border-primary text-dark">
             <span class="fs-4">Snake</span>
@@ -81,7 +79,7 @@
         <div class="container py-4 bg-secondary" style="text-align:center;">
 
             <!-- Main Menu -->
-            <div id="menu" class="py-4 text-light">
+            <div id="menu" class="py-4 text-light" style="background-color:rgba(112, 112, 112, 0.51);">
                 <h2>Snake</h2>
                 <p>press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin</p>
                 <a id="new_game" class="link-alert">new game</a>
@@ -303,7 +301,7 @@
                     snake[snake.length] = {x: snake[0].x, y: snake[0].y};
                     altScore(++score);
                     addFood();
-                    activeDot(food.x, food.y);
+                    food1(food.x, food.y);
                 }
 
                 // Repaint canvas
@@ -317,7 +315,7 @@
                 }
 
                 // Paint food
-                activeDot(food.x, food.y);
+                food1(food.x, food.y);
 
                 // Debug
                 //document.getElementById("debug").innerHTML = snake_dir + " " + snake_next_dir + " " + snake[0].x + " " + snake[0].y;
@@ -390,6 +388,11 @@
                 ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
             }
 
+            let food1 = function(x, y){
+                ctx.fillStyle = "#F00";
+                ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
+            }
+
 
             /* Random food placement */
             /////////////////////////////////////////////////////////////
@@ -439,5 +442,6 @@
         })();
 
     </script>
+    <body>
 
 {% endblock %}
