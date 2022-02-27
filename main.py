@@ -18,11 +18,17 @@ def index():
 @app.route('/studyroom/')
 def studyroom():
     return render_template("studyroom.html")
+@app.route('/test/')
+def test():
+    return render_template("test.html")
 
 @app.route('/calendar/')
 def calendar():
     return render_template("calendar.html")
 
+@app.route('/wordle2/')
+def wordle2():
+    return render_template("wordle2.html")
 
 @app.route('/snake/')
 def snake():
