@@ -42,6 +42,10 @@ def graph():
 def quiz():
     return render_template("quiz.html")
 
+@app.route('/quiz1/')
+def quiz1():
+    return render_template("quiz1.html")
+
 @app.route('/wordle/')
 def wordle():
     return render_template("wordle.html")
