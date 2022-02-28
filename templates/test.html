@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-
+    <button id="playagain" onClick="window.location.reload();">Play Again</button>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     how to play: <br>
     <br>
     • enter different 5-letter words <br>
-    • try to guess the word in less than<br> 6 tries <br>
+    • try to guess the word in less than <br> 6 tries <br>
     • after each attempt, the letters in <br>the word will show if they are in<br> the word and or in the correct spot</p>
 <div id="board">
 </div>
@@ -66,7 +66,7 @@
     #tile-present {
         width: 90px;
         height: 90px;
-        background-color: #D9C7AC;
+        background-color: #F8F391;
         border-radius: 25px;
         position:absolute;
         top:600px;
@@ -86,7 +86,7 @@
     #tile-correct {
         width: 90px;
         height: 90px;
-        background-color: #F8F391;
+        background-color: #8ed96b;
         border-radius: 25px;
         position:absolute;
         top:600px;
@@ -157,13 +157,13 @@
     }
 
     .correct {
-        background-color: #F8F391;
+        background-color: #8ed96b;
         color: #2B59C3;
         border-color: white;
     }
 
     .present {
-        background-color: #D9C7AC;
+        background-color: #F8F391;
         color: #2B59C3;
         border-color: white;
     }
@@ -172,6 +172,21 @@
         background-color: #BCC5D9;
         color: #2B59C3;
         border-color:white;
+    }
+
+    #playagain{
+        position: absolute;
+        top:750px;
+        left:1105px;
+    }
+    #answer{
+        font-size: 30px;
+        position: absolute;
+        top:800px;
+        left:1105px;
+        text-align: left;
+        color:white;
+        font-weight: bold;
     }
 </style>
 
@@ -294,7 +309,7 @@
         {#    document.getElementById("answer").innerText = "Not in word list";#}
         {#    return;#}
         {#}#}
-        {##}
+            {##}
 
 
         let correct = 0;
