@@ -1,3 +1,12 @@
+# Studyowl PBL Theme
+StudyOwl is a study tool designed to help students complete academic work more efficiently. StudyOwl will offer features such as a study room that will promote students to be more focused, as well as planning and other tools to help them review material. StudyOwl's central theme will be Stud the Owl. This owl Avatar will be present on every page of the StudyOwl website and encourage students to complete their homework. Stud the Owl can also be renamed by the students users and will hold up a different object relating to the contents of each website page (for example, in the timer tool page, Stud will be holding up a clock).
+
+Features of the Study Owl Website (Brainwrite) Tools: Clock/Timer, Calculator, Flashcards, Resources, Self-Quizzes, Chatting/Ask-For-Help Feature StudyRoom: Background Music (Rain, Ambience, Lofi, Jazz), Background Image, Imbedded Clock, Focusing Help Planner: To-Do List, Calendar, Notepad, Reminders
+
+The main features will be a Studyroom and a Breakroom. The Studyroom will be dedicated to helping students stay focused during studying and the Breakroom will be dedicated to helping students continuously stimulating their brain even during their breaks from studying. This will be done through completing word and mind games inside the Breakroom.
+
+
+
 # Studyowl Time Box
 <table>
    <tr>
