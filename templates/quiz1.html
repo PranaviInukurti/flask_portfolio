@@ -1,0 +1,93 @@
+{% extends "layouts/project.html" %}
+{% block body %}
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="/static/css/quiz1.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/static/js/quiz1.js"></script>
+<head>
+    <title>Which BLACKPINK Member Are You Quiz</title>
+</head>
+<body>
+<div id="main"><!-- open main div -->
+    <div id="header"><!-- open header div -->
+        <h1>Which BLACKPINK Member Are You?</h1>
+    </div><!-- close header div -->
+
+    <center>
+
+<!- Change Header Backgrounds ->
+    <button id="background1" onclick="changeImage()" style="width: 145px; height: 86px;"><img src="/static/assets/blackpink (1).jpg" alt="Background1" width="120px" height="82px"></button>
+    <button id="background2" onclick="changeImage2()" style="width: 145px; height: 86px;"><img src="/static/assets/blackpink3.jpg" alt="Background2" width="120px" height="82px"></button>
+    <button id="background3" onclick="changeImage3()" style="width: 145px; height: 86px;"><img src="/static/assets/blackpink4.jpg" alt="Background3" width="120px" height="82px"></button>
+    <button id="background4" onclick="changeImage4()" style="width: 145px; height: 86px;"><img src="/static/assets/blackpink6.jpg" alt="Background4" width="120px" height="82px"></button>
+    <br><br><br><br><br><br>
+
+<!- Quiz ->
+    <form id="form1">
+        <h2>1. You're going out with friends for a small party, what are you going to wear?</h2>
+        <label for="style_1"><input type="radio" name="style" value="1" id="style_1" />Campus Style </label>
+        <label for="style_2"><input type="radio" name="style" value="2" id="style_2" />Sports Style</label>
+        <label for="style_3"><input type="radio" name="style" value="4" id="style_3" />Vintage Style</label>
+        <label for="vstyle_4"><input type="radio" name="style" value="3" id="style_4"/>Dark Style</label>
+        <!-- use name instead of id because id can only use once in a html-->
+        <!-- different amount of points (1, 2, 3 or 4) are stored behind different choices-->
+        <br><br><br><br><br><br>
+        <h2>2. You and your friends are now in the cafe, what will you order?</h2>
+        <label for="food_1"><input type="radio" name="food" value="2" id="food_1"/>Ice Cream<br><img src='/static/assets/ice cream.jpg/' width='200' /></label>
+        <label for="food_2"><input type="radio" name="food" value="1" id="food_2"/>Date Cake<br><img src='/static/assets/date cake.jpg/' width='200' /></label>
+        <label for="food_3"><input type="radio" name="food" value="4" id="food_3" />French Fries<br><img src='/static/assets/french fries.jpg/' width='300' /></label>
+        <label for="food_4"><input type="radio" name="food" value="3" id="food_4" />Kimchi Soup<br><img src='/static/assets/kimchi soup.jpg/' width='300' /></label>
+        <br><br><br><br><br><br>
+        <h2>3. You and your friends are chatting about, if you could date a BLACKPINK member, who would you date?</h2>
+        <label for="member_1"><input type="radio" name="member" value="3" id="member_1" />Jennie<br><img src='/static/assets/jennie.jpg/' width='200' /></label>
+        <label for="member_2"><input type="radio" name="member" value="4" id="member_2" />Lisa<br><img src='/static/assets/lisa.jpg/' width='200' /></label>
+        <label for="member_3"><input type="radio" name="member" value="2" id="member_3" />Jisoo<br><img src='/static/assets/jisoo.jpeg/' width='200' /></label>
+        <label for="member_4"><input type="radio" name="member" value="1" id="member_4" />Rose<br><img src='/static/assets/rose.jpg/' width='200' /></label>
+        <br><br><br><br><br><br>
+        <h2>4. You've had enough to eat and drink, what do you decide to do next?</h2>
+        <label for="activity_1"><input type="radio" name="activity" value="2" id="activity_1" />Come to the yoga studio.</label>
+        <label for="activity_2"><input type="radio" name="activity" value="4" id="activity_2" />Shopping of course!</label>
+        <label for="activity_3"><input type="radio" name="activity" value="1" id="activity_3" />Watch a movie.</label>
+        <label for="activity_4"><input type="radio" name="activity"  value="3" id="activity_4" />Singing time.</label>
+        <br><br><br><br><br>
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+
+    <p>You are: <span id="grade" style="display: none">__</span></p> <!-- display none because i don't want to display the total points the user got-->
+    <p id="grade2"></p>
+    <br><br><br><br><br><br>
+
+<!-BLACKPINK MV->
+        <!-- kill this love -->
+        <button id="mv1" onclick="displayVideo()" style="font-size: 22px; width: 190px; height: 65px;">Kill This Love</button>
+        <div id="display-video" style="display: none">
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/2S24-y0Ij3Y"></iframe>
+            <!--iframe specifies an inline frame, that means it is used to embed some other document within the current HTML document.-->
+        </div>
+
+        <!-- how you like that -->
+        <button id="mv2" onclick="displayVideo2()" style="font-size: 22px; width: 190px; height: 65px;">How You Like That</button>
+        <div id="display-video2" style="display: none">
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/ioNng23DkIM"></iframe>
+        </div>
+
+        <!-- ddu-du-ddu-du -->
+        <button id="mv3" onclick="displayVideo3()" style="font-size: 22px; width: 190px; height: 65px;">DDU-DU-DDU-DU</button>
+        <div id="display-video3" style="display: none">
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/IHNzOHi8sJs"></iframe>
+        </div>
+
+        <br><br><br><br><br><br>
+
+<!-Random BLACKPINK Fact Generator->
+         <div>
+         <button onclick="newFact()" style="font-size: 18px; width: 250px; height: 85px;">Generate BLACKPINK Fact<img src="/static/assets/blackpink (1).jpg" alt="blackpink" width="100px" height="60px" style="margin-top:-1px;"> </button>
+            <div id="factDisplay" style="font-size: 17px; font-family: monospace;">
+                <!-- Quotes will display here -->
+            </div>
+         </div>
+</center>
+</div><!-- close main div -->
+</body>
+
+{% endblock %}
