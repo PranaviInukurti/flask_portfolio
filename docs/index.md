@@ -5,6 +5,12 @@ Features of the Study Owl Website (Brainwrite) Tools: Clock/Timer, Calculator, F
 
 The main features will be a Studyroom and a Breakroom. The Studyroom will be dedicated to helping students stay focused during studying and the Breakroom will be dedicated to helping students continuously stimulating their brain even during their breaks from studying. This will be done through completing word and mind games inside the Breakroom.
 
+# Wireframes
+<img src = "https://github.com/samayass/flask_portfolio/blob/b8009841604c3f318588dc27f427b64bd59be7bf/githubimages/homeWF.png"></img>
+<img src = "https://github.com/samayass/flask_portfolio/blob/fcc19352ffe98689a3a0a7f73edc57bcb22b6af5/githubimages/studyroomWF.png"></img>
+<img src = "https://github.com/samayass/flask_portfolio/blob/75cd6fb2b42390841327dc7d9c2f89c64dca9d5d/githubimages/toolsWF.png"></img>
+<img src = "https://github.com/samayass/flask_portfolio/blob/75cd6fb2b42390841327dc7d9c2f89c64dca9d5d/githubimages/gamesWF.png"></img>
+
 
 
 # Studyowl Time Box
