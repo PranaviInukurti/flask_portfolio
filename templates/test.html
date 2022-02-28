@@ -205,6 +205,7 @@
 
     guessList = guessList.concat(wordList);
 
+
     //picking a random word for user to guess
     var wordListlen = wordList.length;
     function random(mx) {
@@ -272,45 +273,23 @@
 
 
     function update() {
-        {##}
-        {#let guess  = document.getElementById("0-0").innerText.concat(document.getElementById("0-1").innerText,#}
-        {#    document.getElementById("0-2").innerText,document.getElementById("0-3").innerText,#}
-        {#    document.getElementById("0-4").innerText).toLowerCase();#}
-        {#console.log(guess)#}
-        {##}
-        {##}
-        {#let guess1  = document.getElementById("1-0").innerText.concat(document.getElementById("1-1").innerText,#}
-        {#    document.getElementById("1-2").innerText,document.getElementById("1-3").innerText,#}
-        {#    document.getElementById("1-4").innerText).toLowerCase();#}
-        {#console.log(guess1)#}
-        {##}
-        {#let guess2  = document.getElementById("2-0").innerText.concat(document.getElementById("2-1").innerText,#}
-        {#   document.getElementById("2-2").innerText,document.getElementById("2-3").innerText,#}
-        {#   document.getElementById("2-4").innerText).toLowerCase();#}
-        {#console.log(guess2)#}
-        {##}
-        {#let guess3  = document.getElementById("3-0").innerText.concat(document.getElementById("3-1").innerText,#}
-        {#   document.getElementById("3-2").innerText,document.getElementById("3-3").innerText,#}
-        {#   document.getElementById("3-4").innerText).toLowerCase();#}
-        {#console.log(guess3)#}
-        {##}
-        {#let guess4  = document.getElementById("4-0").innerText.concat(document.getElementById("4-1").innerText,#}
-        {#   document.getElementById("4-2").innerText,document.getElementById("4-3").innerText,#}
-        {#   document.getElementById("4-4").innerText).toLowerCase();#}
-        {#console.log(guess4)#}
-        {##}
-        {#let guess5  = document.getElementById("5-0").innerText.concat(document.getElementById("5-1").innerText,#}
-        {#   document.getElementById("5-2").innerText,document.getElementById("5-3").innerText,#}
-        {#   document.getElementById("5-4").innerText).toLowerCase();#}
-        {#console.log(guess5)#}
-        {##}
-        {##}
-        {#if (!guessList.includes(guess)) {#}
-        {#    document.getElementById("answer").innerText = "Not in word list";#}
-        {#    return;#}
-        {#}#}
-            {##}
+        let guess = "";
+        document.getElementById("answer").innerText = "";
 
+        //string up the guesses into the word
+        for (let c = 0; c < width; c++) {
+            let currTile = document.getElementById(row.toString() + '-' + c.toString());
+            let letter = currTile.innerText;
+            guess += letter;
+        }
+
+        guess = guess.toLowerCase(); //case sensitive
+        console.log(guess);
+
+        if (!guessList.includes(guess)) {
+            document.getElementById("answer").innerText = "Not a word";
+            return;
+        }
 
         let correct = 0;
         for (let c = 0; c < width; c++) {
