@@ -6,6 +6,49 @@
     <th>Tech Talk</th>
     <th>Canvas</th>
    </tr>
+   
+   <tr>
+    <td>11</td>
+    <td>PBL Final</td>
+    <td>None</td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/2017407">PBL Final</a></td>
+  </tr>
+   <tr>
+    <td>10</td>
+    <td>PBL 2, Teacher TPT, Student TT</td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2-TPT-10----Going-Beyond-CB">TPT10</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/2017406">Final Exam</a></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>	PBL 1, Teacher TPT, Student TT </td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2-TPT-9---Computing-Systems-and-Networks">TPT9</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/2017405">3, 4, 5</a></td>
+  </tr>
+   <tr>
+    <td>8</td>
+    <td>Google Search</td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2:-Tech-Talk-8-Google-Search">TT8</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/2013668">Crossover Coding</a></td>
+  </tr>
+   <tr>
+    <td>7</td>
+    <td>Graphing, Simulation, Snake</td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2:-TT7-Graphing,-Simulations,-Snake">TT7</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/1967730">PBL Showing Take 2</a></td>
+  </tr>
+   <tr>
+    <td>6</td>
+    <td>	Mid Term and Ketchup</td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2:-TT6-Vocab-Competency">TT6</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/1995361">Mid Term Vocab and Competency</a></td>
+  </tr>
+   <tr>
+    <td>5</td>
+    <td>Algorithms,<a href="https://csp.nighthawkcodingsociety.com/algorithm/fibonacci/">Fibo</a>,<a   href="https://csp.nighthawkcodingsociety.com/algorithm/palindrome/">Pali</a></td>
+    <td><a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/Tri-2:-TT5---Algorithms">TT5</a></td>
+    <td><a href="https://poway.instructure.com/courses/112435/assignments/1967730">3, 4, 5</a></td>
+  </tr>
    <tr>
     <td>4</td>
     <td>Procedures, Blueprint, <a href="https://github.com/nighthawkcoders/nighthawk_csp/wiki/GitHub-Pages-and-Jekyll">Jekyll</a></td>
