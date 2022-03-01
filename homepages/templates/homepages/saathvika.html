@@ -59,7 +59,7 @@
             // APPARENTLY THE CODE DOESN'T WORK, UNLESS I DIVIDE IT BY SOMETHING??!?!??!
             // So I'll divide it by 1. If I don't, inputting 10 seconds will somehow turn into 1000 seconds.
             // FOR NO REASON!!! Same for minutes and hours.
-            distance = (seconds_distance / 1) + (minutes_distance * 60 / 1) + (hours_distance * 3600 / 1);
+            distance = (seconds_distance / 1) + (minutes_distance * 60) + (hours_distance * 3600);
 
             // Display values for hours, minutes, and seconds.
             hours = hours_distance / 1;
@@ -78,7 +78,7 @@
             stoppingCondition = false;
 
             // Prevents the function from being run more than once.
-            if (isStarted == false) {
+            if (isStarted === false) {
                 intervalX = setInterval(function () {
 
                     // Prevents the function from being run more than once.
@@ -87,7 +87,7 @@
                     // Find the distance between now and the count down date
 
                     // If stoppingCondition is false, the distance variable gets reduced by 1 per second.
-                    if (stoppingCondition == false) {
+                    if (stoppingCondition === false) {
                         distance -= 1;
                     }
 
@@ -97,7 +97,7 @@
                     // you'd change the EXPIRED code down below to read (if hours, minutes, and seconds < 0) instead of the current (if distance < 0)
                     // and get rid of the distance variable in the setTime function and the let statement up above.
                     // I'm not sure if there are other things, so I don't want to change it for now. The code works, so it works.
-                    if (stoppingCondition == false) {
+                    if (stoppingCondition === false) {
                         seconds = seconds - 1;
                         if (seconds < 0) {
                             seconds = 59;
@@ -169,16 +169,16 @@
                 </div>
                 <br>
                 <div style="background-color: rgba(83,105,122, 0.8);" >
-                    <p style="font-size: 25px; color: papayawhip; font-family: monospace">Timer:</p>
+                    <p style="font-size: 20px; color: papayawhip; font-family: monospace">Timer:</p>
                     <p style="font-size: 50px; color: #99ba6d; font-family: Blippo" id="demo"></p>
-                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Hours:</label>
-                    <input style="font-family: monospace" id="hours_time" placeholder="1"><br>
-                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Minutes:</label>
-                    <input style="font-family: monospace" id="minutes_time" placeholder="30"><br>
-                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Enter Seconds:</label>
-                    <input style="font-family: monospace" id="seconds_time" placeholder="0"><br>
+                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Hours:</label>
+                    <input style="font-family: monospace; width: 15%" id="hours_time"><br>
+                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Minutes:</label>
+                    <input style="font-family: monospace; width: 15%" id="minutes_time"><br>
+                    <label style="font-size: 20px; color: papayawhip; font-family: monospace">Seconds:</label>
+                    <input style="font-family: monospace; width: 15%" id="seconds_time"><br>
+                    <br>
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="setTime()">Set Timer!</button> <br>
-                    <small style="color: #99ba6d">Format: 1h 30m 0s</small> <br>
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="resumeTime()">Start Timer!</button>
                     <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="stopTime()">Pause Timer!</button>
                 </div>

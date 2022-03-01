@@ -104,7 +104,7 @@ def read():
         po = user_by_id(userid)
         if po is not None:
             table = [po.read()]  # placed in list for easier/consistent use within HTML
-    return render_template("templates/crud/crudtable.html", table=table)
+    return render_template("crudtable.html", table=table)
 
 
 # CRUD create/add

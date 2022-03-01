@@ -1,5 +1,4 @@
 from crud.model import Users, db
-import random
 
 dbURI = 'sqlite:///crud/myDB.db'
 
