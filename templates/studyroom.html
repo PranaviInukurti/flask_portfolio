@@ -8,7 +8,110 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/static/js/linda.js"></script>
-    <body id="bodyStudyroom" style="background-image: url(/static/assets/studyBackground2.gif); background-size:cover;">
+
+    <script>
+
+        let intervalX;
+        let distance;
+
+        // 3 values for hours minutes and seconds, only for display
+        let hours = 0;
+        let minutes = 0;
+        let seconds = 0;
+
+        // If stoppingCondition is false, the distance variable gets reduced by 1 per second.
+        let stoppingCondition = true;
+        // Prevents the function from being run more than once.
+        let isStarted = false;
+        function setTime () {
+
+            // Stops the timer.
+            stoppingCondition = true;
+            // Gets the user input.
+            const hours_distance = document.getElementById("hours_time").value;
+            const minutes_distance = document.getElementById("minutes_time").value;
+            const seconds_distance = document.getElementById("seconds_time").value;
+            // Turns distance into hours/minutes/seconds.
+            // APPARENTLY THE CODE DOESN'T WORK, UNLESS I DIVIDE IT BY SOMETHING??!?!??!
+            // So I'll divide it by 1. If I don't, inputting 10 seconds will somehow turn into 1000 seconds.
+            // FOR NO REASON!!! Same for minutes and hours.
+            distance = (seconds_distance / 1) + (minutes_distance * 60) + (hours_distance * 3600);
+
+            // Display values for hours, minutes, and seconds.
+            hours = hours_distance / 1;
+            minutes = minutes_distance / 1;
+            seconds = seconds_distance / 1;
+
+            // Commented this line of code out, didn't know what it did
+            // clearInterval(intervalX);
+
+            // Sets the text to the user input.
+            document.getElementById("demo2").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+        }
+
+        function resumeTime() {
+            // Starts the timer.
+            stoppingCondition = false;
+
+            // Prevents the function from being run more than once.
+            if (isStarted === false) {
+                intervalX = setInterval(function () {
+
+                    // Prevents the function from being run more than once.
+                    isStarted = true;
+
+                    // Find the distance between now and the count down date
+
+                    // If stoppingCondition is false, the distance variable gets reduced by 1 per second.
+                    if (stoppingCondition === false) {
+                        distance -= 1;
+                    }
+
+                    // Changes display values
+                    // I could have just used this instead of the distance variable, but at this point I'm too lazy to change it
+                    // If you all feel like cleaning up the code:
+                    // you'd change the EXPIRED code down below to read (if hours, minutes, and seconds < 0) instead of the current (if distance < 0)
+                    // and get rid of the distance variable in the setTime function and the let statement up above.
+                    // I'm not sure if there are other things, so I don't want to change it for now. The code works, so it works.
+                    if (stoppingCondition === false) {
+                        seconds = seconds - 1;
+                        if (seconds < 0) {
+                            seconds = 59;
+                            minutes = minutes - 1;
+                        }
+                        if (minutes < 0) {
+                            minutes = 59;
+                            hours = hours - 1;
+                        }
+                    }
+
+                    // Time calculations for days, hours, minutes and seconds
+                    // Commented out because we're no longer using the date-time system
+                    // const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    // const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    // const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Display the result in the element with id="demo"
+                    document.getElementById("demo2").innerHTML = hours + "h " + minutes + "m " + seconds + "s " /*days + "d " + hours + "h " + minutes + "m " + seconds + "s "*/;
+
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                        // Commented this line of code out, caused a bug where the timer wouldn't start again after EXPIRED'ing
+                        // clearInterval(intervalX);
+                        document.getElementById("demo2").innerHTML = "EXPIRED";
+                    }
+                }, 1000);
+            }
+        }
+
+        function stopTime() {
+            stoppingCondition = true;
+        }
+
+    </script>
+
+    <body id="bodyStudyroom" style="background-image: url(/static/assets/studyBackground1.gif); background-size:cover;">
     <style>
 
         .navbar{
@@ -96,12 +199,18 @@
                     <div style="margin-left:-200px">
                         <div style="display: flex"> <button id="show-timer" onclick="showTimer()"><img src="https://www.vhv.rs/dpng/d/195-1958831_plus-sign-icon-clipart-and-minus-signs-transparent.png" alt="Plus Sign" width="45" height="22" style="margin-left:-2.5px"></button> <div style="color: white;margin-top: 28px; margin-left:5px;font-family: cursive; background-color: rgba(112, 112, 112, 0.51)"> Timer </div> </div>
                         <div style="margin-left:-5px; background-color: white;" class="container" id="timer">
-                        <label style="font-size: 20px; color: black; font-family: monospace;padding: 10px 0 10px; margin: 0;">Enter a Time:</label><br>
-                        <p style="font-size: 20px; color: black; font-family: monospace" id="demo"></p>
-                        <input style="font-family: monospace" id="time" placeholder="Jan 1, 2023 00:00:00">
-                        <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="setTime()">Set</button> <br>
-                        <small style="color: #99ba6d">Format: Jan 1, 2023 00:00:00</small> <br>
-                        <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: papayawhip" onclick="stopTime()">Stop</button>
+                            <div>
+                                <br> <p style="font-size: 50px; color: #99ba6d; font-family: Blippo" id="demo2"></p>
+                                <label style="font-size: 17px; color: black; font-family: monospace">Hours:</label>
+                                <input style="font-family: monospace; width: 20%" id="hours_time"><br>
+                                <label style="font-size: 17px; color: black; font-family: monospace">Minutes:</label>
+                                <input style="font-family: monospace; width: 20%" id="minutes_time"><br>
+                                <label style="font-size: 17px; color: black; font-family: monospace">Seconds:</label>
+                                <input style="font-family: monospace; width: 20%" id="seconds_time"><br>
+                                <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: #99ba6d" onclick="setTime()">Set!</button>
+                                <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: #99ba6d" onclick="resumeTime()">Start!</button>
+                                <button id="get-time" style="height: 35px; font-family: monospace; font-size: 15px; color: black; background-color: #99ba6d" onclick="stopTime()">Pause!</button>
+                            </div>
                     </div>
                     </div>
 
