@@ -12,6 +12,11 @@ def todo():
     return render_template("todo.html")
 
 
+@app_tools.route('/timer/')
+def timer():
+    return render_template("timer.html")
+
+
 @app_tools.route('/calculator/')
 def calculator():
     return render_template("calculator.html")
