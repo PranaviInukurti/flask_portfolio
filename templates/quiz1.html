@@ -1,9 +1,7 @@
 {% extends "layouts/project.html" %}
 {% block body %}
-    <!DOCTYPE html>
-    <link rel="stylesheet" type="text/css" href="/static/css/quiz1.css">
+<!DOCTYPE html>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/static/js/quiz1.js"></script>
     <head>
         <title>Which BLACKPINK Member Are You Quiz</title>
     </head>
@@ -61,6 +59,19 @@
 
     </style>
     <body>
+
+    <!- Background Music ->
+
+    <div style="display: flex">
+        <button style="margin-left: 1240px;width: 100px;height: 65px;" id="piano-button" onclick="playPiano()"><img src="/static/assets/playButton.png" alt="play" width="81px" height="60px"></button>
+        <button style="width: 100px;height: 65px;" id="piano-button" onclick="pausePiano()"><img src="/static/assets/pauseButton.png" alt="pause" width="60px" height="60px"></button>
+    </div>
+    <div>
+        <audio  loop id="piano" src="/static/stayPiano.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+
     <div id="main"><!-- open main div -->
         <div id="header"><!-- open header div -->
             <h1>Which BLACKPINK Member Are You?</h1>
@@ -219,5 +230,13 @@
             document.getElementById("header").style.backgroundImage = 'url("/static/assets/blackpink6.jpg")'
         }
 
+        //background music
+        function playPiano() {
+            document.getElementById('piano').play();
+        }
+
+        function pausePiano() {
+            document.getElementById('piano').pause();
+        }
     </script>
 {% endblock %}
